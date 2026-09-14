@@ -1,1 +1,463 @@
-hello world
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciro Mendoza · Media Artist & Chiptuner Performer</title>
+    <meta name="description" content="Artista chiptune, desarrollador creativo y cofundador de Blipblop. Creo experiencias audiovisuales con tecnología obsoleta, Game Boy y sintetizadores 8-bit.">
+    <meta name="keywords" content="chiptune, 8bit, Game Boy, chipmusic, Buenos Aires, Blipblop, arte digital, desarrollador creativo, KRANK, Fuzzytronic, Cinematronic, Ciro Mendoza">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Ciro · Cinematronic · Chiptune Artist">
+    <meta property="og:description" content="Artista chiptune y desarrollador creativo. Game Boy, sintetizadores 8-bit y experiencias audiovisuales.">
+    <meta property="og:type" content="website">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#hero" class="logo">
+                <!-- <span class="logo-icon">C</span> -->
+                CIRO MENDOZA
+            </a>
+            
+            <!-- Mobile Menu Toggle -->
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            
+            <!-- Navigation Menu (debe estar antes del hamburger para CSS ~) -->
+            <ul class="nav-menu">
+                <li><a href="#projects">Proyectos</a></li>
+                <!-- <li><a href="https://intermosh.github.io/playground" target="_blank">ART LAB</a></li> -->
+                <li><a href="#story">Historia</a></li>
+                <li><a href="#tools">Herramientas</a></li>
+                <li><a href="#commercial">Trabajos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+            
+            <!-- Hamburger Button -->
+            <label for="nav-toggle" class="hamburger" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section id="hero" class="section">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <span class="hero-eyebrow">Media Artist · Chiptune Performer</span>
+                <h1 class="hero-title">
+                    <!-- <span class="text-gradient glitch">Ciro Mendoza</span><br> -->
+                    <span class="text-gradient-pink">Ciro Mendoza</span>
+
+                    <!-- <span style="font-size: 0.5em; color: var(--text-secondary);">aka</span>  -->
+                    <!-- <span class="text-gradient-pink">Cinematronic</span> -->
+                </h1>
+                <p class="hero-subtitle">
+                    Latin American <strong>media artist</strong> working performatively with obsolete hardware and generative audiovisual systems.
+                    <!-- Creo <strong>experiencias audiovisuales</strong> con tecnología obsoleta. 
+                    Game Boy, sintetizadores 8-bit y hardware retro convertidos en 
+                    <strong>instrumentos de arte experimental</strong>. -->
+                </p>
+                <p class="hero-subtitle" style="font-size: 0.95rem; margin-top: -1rem;">
+                    Cofundador del colectivo <strong style="color: var(--secondary);">Blipblop</strong>.
+                </p>
+                <div class="hero-cta">
+                    <a href="https://www.youtube.com/@ciberdelia.telnet" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-youtube"></i> Ver en YouTube
+                    </a>
+                    <a href="#projects" class="btn btn-outline">
+                        Explorar proyectos <i class="fas fa-arrow-down"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROYECTOS ARTÍSTICOS -->
+    <section id="projects" class="section">
+        <div class="container">
+            <span class="label">Proyectos artísticos</span>
+            <h2>Sonido 8-bit, <span class="text-gradient">Máquinas Obsoletas</span></h2>
+            
+            <div class="projects-grid">
+                <!-- PROYECTO DESTACADO: Fuzzytronic -->
+                <article class="project-card featured fade-in">
+                    <div class="project-media">
+                        <span class="project-badge badge-bottom-right">Nuevo 2026</span>
+                        <iframe 
+                            src="https://www.youtube.com/embed/S4VANo0o9yE" 
+                            title="Fuzzytronic - Game Boy + Batería en vivo"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">Live Performance</span>
+                            <span class="project-tag">Game Boy</span>
+                            <span class="project-tag">Drums</span>
+                            <span class="project-tag">LSDJ</span>
+                        </div>
+                        <h3 class="project-title text-gradient-pink">Fuzzytronic</h3>
+                        <p class="project-description">
+                            Proyecto que combina <strong>Game Boy</strong> como sintetizador con 
+                            <strong>batería acústica real</strong>. Una fusión entre el sonido crudo 
+                            del chip de 8-bit y la energía física de la percusión en vivo.
+                            <br><br>
+                            El Game Boy corre LSDJ, controlando secuencias y síntesis mientras 
+                            la batería añade la capa orgánica y humana que el chip no puede dar.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://www.youtube.com/@fuzzytronic.techpunk" target="_blank" class="project-link">
+                                <i class="fab fa-youtube"></i> Ver videos
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Cinematronic - Entrevista Latinchip -->
+                <article class="project-card fade-in">
+                    <div class="project-media">
+                        <iframe 
+                            src="https://www.youtube.com/embed/_bcEIuQt6B8" 
+                            title="Cinematronic - Entrevista Latinchip"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">Chiptune</span>
+                            <span class="project-tag">8-bit</span>
+                            <span class="project-tag">Entrevista</span>
+                        </div>
+                        <h3 class="project-title">Cinematronic</h3>
+                        <p class="project-description">
+                            Proyecto solista de chipmusic usando hardware vintage: Game Boy, 
+                            Commodore 64, NES y sintetizadores modificados. Entrevista en el 
+                            programa <strong>Latinchip</strong> sobre la escena chiptune latinoamericana.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://www.youtube.com/@ciberdelia.telnet" target="_blank" class="project-link">
+                                <i class="fab fa-youtube"></i> Más videos
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- KRANK - Juegos Experimentales -->
+                <article class="project-card fade-in">
+                    <div class="project-media">
+                        <img src="assets/portfolio/krank-games.jpg" alt="KRANK - Juegos Experimentales" 
+                             onerror="this.src='https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&h=400&fit=crop'">
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">Game Dev</span>
+                            <span class="project-tag">Experimental</span>
+                            <span class="project-tag">Itch.io</span>
+                        </div>
+                        <h3 class="project-title">KRANK</h3>
+                        <p class="project-description">
+                            Mi alter ego para crear <strong>juegos experimentales</strong>. 
+                            Proyectos que exploran mecánicas no convencionales, narrativas 
+                            alternativas y estéticas retro con un enfoque artístico.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://daskrank.itch.io/" target="_blank" class="project-link">
+                                <i class="fab fa-itch-io"></i> Ver juegos
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blipblop Legacy -->
+                <article class="project-card fade-in">
+                    <div class="project-media">
+                        <img src="assets/portfolio/blipblop.jpg" alt="Blipblop Colectivo" 
+                             onerror="this.src='https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop'">
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">Colectivo</span>
+                            <span class="project-tag">Buenos Aires</span>
+                            <span class="project-tag">2008-2019</span>
+                        </div>
+                        <h3 class="project-title">Blipblop</h3>
+                        <p class="project-description">
+                            Colectivo pionero de la escena chiptune en Argentina. Organizamos 
+                            eventos, talleres y conectamos a la comunidad latinoamericana de 
+                            chipmusic durante más de una década.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://blipblop8bit.bandcamp.com/" target="_blank" class="project-link">
+                                <i class="fab fa-bandcamp"></i> Netlabel
+                            </a>
+                            <a href="https://www.youtube.com/@blipblop8bit" target="_blank" class="project-link">
+                                <i class="fab fa-youtube"></i> Más videos
+                            </a>
+
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ART LAB PREVIEW -->
+    <section id="art-lab-preview" class="section section-compact">
+        <div class="artlab-grid-bg"></div>
+        
+        <div class="container" style="position: relative; z-index: 2; text-align: center;">
+            <span class="label" style="color: #ff0033;">[ EXPERIMENTAL ]</span>
+            <h2 style="font-size: clamp(2rem, 6vw, 4rem); margin-bottom: 1.5rem;">
+                <span class="text-gradient">ART</span> <span style="color: #333;">///</span> LAB
+            </h2>
+            <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 2rem; font-size: 1.1rem; line-height: 1.8;">
+                Un laboratorio de experimentos en <strong style="color: #fff;">new media</strong>. 
+                Arcade holográfico, síntesis gestual, visualizadores reactivos y más. 
+                <br><br>
+                <!-- <em style="color: #666;">6 proyectos activos en desarrollo.</em> -->
+            </p>
+            
+            <!-- Preview cards -->
+            <!-- <div class="artlab-preview-grid">
+                <div class="artlab-preview-card">
+                    <div style="font-size: 0.6rem; color: #444; letter-spacing: 0.2em; margin-bottom: 10px;">EXP_001</div>
+                    <div style="font-family: 'Space Mono', monospace; font-weight: 700; font-size: 0.9rem;">HOLOGRAPHIC ARCADE</div>
+                </div>
+                <div class="artlab-preview-card">
+                    <div style="font-size: 0.6rem; color: #444; letter-spacing: 0.2em; margin-bottom: 10px;">EXP_003</div>
+                    <div style="font-family: 'Space Mono', monospace; font-weight: 700; font-size: 0.9rem;">GESTURE SYNTH</div>
+                </div>
+                <div class="artlab-preview-card">
+                    <div style="font-size: 0.6rem; color: #444; letter-spacing: 0.2em; margin-bottom: 10px;">EXP_004</div>
+                    <div style="font-family: 'Space Mono', monospace; font-weight: 700; font-size: 0.9rem;">LIVE VISUALIZER</div>
+                </div>
+            </div> -->
+
+            <a href="https://intermosh.github.io/playground" target="_blank" class="btn" style="background: transparent; border: 1px solid #fff; color: #fff; padding: 15px 40px; font-size: 0.85rem; letter-spacing: 0.15em;">
+                ENTRAR AL LABORATORIO →
+            </a>
+        </div>
+    </section>
+
+    <!-- HISTORIA / ABOUT -->
+    <section id="story" class="section">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-content fade-in">
+                    <span class="label">Mi historia</span>
+                    <h2>Del <span class="text-gradient">Chip</span> al <span class="text-gradient-pink">Código</span></h2>
+                    
+                    <p>
+                        Empecé haciendo música con lo que otros consideraban basura electrónica. 
+                        Game Boys rotos, Commodores olvidados, cables que nadie quería. 
+                        <strong>La limitación se convirtió en mi estética.</strong>
+                    </p>
+                    
+                    <p>
+                        En 2008 cofundé <strong>Blipblop</strong>, el primer colectivo de chiptune 
+                        de Buenos Aires. Durante 11 años organizamos fiestas, talleres y conectamos 
+                        a artistas de toda Latinoamérica. Fue una escuela de comunidad y autogestión.
+                    </p>
+
+                    <div class="story-highlight">
+                        <p>
+                            "Desarrollo sistemas interactivos que exploran la tecnología considerada obsoleta como lenguaje poético."
+                        </p>
+                    </div>
+                    
+                    <p>
+                        Hoy combino esa filosofía con desarrollo web, AR y diseño interactivo. 
+                        Mis herramientas cambiaron, pero el objetivo es el mismo: 
+                        <strong>crear experiencias que conecten tecnología con emoción</strong>.
+                    </p>
+
+                    <a href="assets/portfolio/Ciro_CV.pdf" download class="btn btn-outline" style="margin-top: 1rem;">
+                        <i class="fas fa-file-pdf"></i> Descargar CV
+                    </a>
+                </div>
+                
+                <div class="story-visual fade-in">
+                    <img src="assets/portfolio/profile.jpg" alt="Ciro - Cinematronic" class="story-image"
+                         onerror="this.src='https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=600&h=700&fit=crop'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HERRAMIENTAS -->
+    <section id="tools" class="section section-compact">
+        <div class="container">
+            <span class="label">Stack técnico</span>
+            <h2>Herramientas que <span class="text-gradient">uso</span></h2>
+            
+            <div class="tools-container fade-in">
+                <div class="tools-category">
+                    <h4 class="tools-category-title">Música / Audio</h4>
+                    <div class="tools-grid">
+                        <div class="tool-item"><i class="fas fa-gamepad"></i><span>LSDJ</span></div>
+                        <div class="tool-item"><i class="fas fa-microchip"></i><span>Game Boy</span></div>
+                        <!-- <div class="tool-item"><i class="fas fa-music"></i><span>Ableton Live</span></div> -->
+                        <!-- <div class="tool-item"><i class="fas fa-drum"></i><span>Batería</span></div> -->
+                        <div class="tool-item"><i class="fas fa-wave-square"></i><span>PSP</span></div>
+                    </div>
+                </div>
+
+                <div class="tools-category">
+                    <h4 class="tools-category-title">Desarrollo Web</h4>
+                    <div class="tools-grid">
+                        <div class="tool-item"><i class="fab fa-html5"></i><span>HTML5</span></div>
+                        <div class="tool-item"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+                        <div class="tool-item"><i class="fab fa-js"></i><span>JavaScript</span></div>
+                        <div class="tool-item"><i class="fas fa-vr-cardboard"></i><span>MindAR</span></div>
+                        <div class="tool-item"><i class="fas fa-cube"></i><span>Three.js</span></div>
+                    </div>
+                </div>
+
+                <div class="tools-category">
+                    <h4 class="tools-category-title">Diseño / Interactivo</h4>
+                    <div class="tools-grid">
+                        <div class="tool-item"><i class="fab fa-figma"></i><span>Figma</span></div>
+                        <div class="tool-item"><i class="fab fa-unity"></i><span>Unity</span></div>
+                        <div class="tool-item"><i class="fas fa-bolt"></i><span>Bolt</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRABAJOS COMERCIALES -->
+    <section id="commercial" class="section section-compact">
+        <div class="container" style="text-align: center;">
+            <span class="label">Trabajos por encargo</span>
+            <h2>Desarrollo <span class="text-gradient">Profesional</span></h2>
+            <p class="commercial-intro" style="margin: 0 auto 3rem;">
+                Además del trabajo artístico, desarrollo proyectos web y aplicaciones 
+                para clientes comerciales e institucionales.
+            </p>
+
+            <div class="commercial-carousel fade-in">
+                <div class="commercial-track">
+                                        <div class="commercial-slide">
+                        <div class="commercial-card">
+                            <img src="assets/portfolio/ibera.jpg" alt="Iberá AR Museo" class="commercial-image"
+                                 onerror="this.src='https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=500&h=280&fit=crop'">
+                            <div class="commercial-info">
+                                <h3>Iberá AR - Museo Interactivo</h3>
+                                <p>Experiencia de Realidad Aumentada 3D para paneles del museo Casa Iberá, Corrientes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="commercial-slide">
+                        <div class="commercial-card">
+                            <img src="assets/portfolio/movilfest.png" alt="Movil Fest" class="commercial-image"
+                                 onerror="this.src='https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=500&h=280&fit=crop'">
+                            <div class="commercial-info">
+                                <h3>Festival Móvil Fest 2020</h3>
+                                <p>Web animada para festival de cine independiente. Misiones, Argentina.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="commercial-slide">
+                        <div class="commercial-card">
+                            <img src="assets/portfolio/ituzaingo.png" alt="Ituzaingó Ciudad Paraíso" class="commercial-image"
+                                 onerror="this.src='https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=500&h=280&fit=crop'">
+                            <div class="commercial-info">
+                                <h3>Ituzaingó Ciudad Paraíso</h3>
+                                <p>App de información turística. Corrientes, Argentina.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="commercial-slide">
+                        <div class="commercial-card">
+                            <img src="assets/portfolio/geely.jpg" alt="Geely Argentina" class="commercial-image"
+                                 onerror="this.src='https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=500&h=280&fit=crop'">
+                            <div class="commercial-info">
+                                <h3>Geely Argentina</h3>
+                                <p>Web con catálogo de fotos en 360°.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="commercial-slide">
+                        <div class="commercial-card">
+                            <img src="assets/portfolio/somosn.jpg" alt="Somos Naturaleza" class="commercial-image"
+                                 onerror="this.src='https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=500&h=280&fit=crop'">
+                            <div class="commercial-info">
+                                <h3>Somos Naturaleza</h3>
+                                <p>Web interactiva educativa.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="carousel-nav">
+                <button class="carousel-btn" id="prevBtn" aria-label="Anterior">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="carousel-dots" id="carouselDots"></div>
+                <button class="carousel-btn" id="nextBtn" aria-label="Siguiente">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contact" class="section section-compact">
+        <div class="container">
+            <span class="label" style="text-align: center; display: block;">Conectemos</span>
+            <h2 style="text-align: center;">Trabajemos <span class="text-gradient">juntos</span></h2>
+            
+            <p class="contact-statement fade-in">
+                Si buscás a alguien que entienda tanto de código como de creatividad, 
+                que haya vivido la escena y conozca las herramientas, 
+                <strong>hablemos</strong>.
+            </p>
+
+            <div class="social-links fade-in">
+                <a href="https://www.youtube.com/@ciberdelia.telnet" target="_blank" class="social-link">
+                    <i class="fab fa-youtube"></i> YouTube
+                </a>
+                <a href="https://www.instagram.com/ciro.cinematronic" target="_blank" class="social-link">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="https://daskrank.itch.io/" target="_blank" class="social-link">
+                    <i class="fab fa-itch-io"></i> Itch.io
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span>&lt;</span><span class="footer-heart">♥</span><span>/&gt;</span>
+            </div>
+            <p class="footer-text">© Intermosh 2026</p>
+        </div>
+    </footer>
+
+    <!-- Scripts (ES6 Modules) -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
