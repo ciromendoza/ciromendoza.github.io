@@ -1,7 +1,6 @@
 /**
  * Carousel Module
- * Handles commercial works carousel with touch/swipe support
- * © Intermosh 2025
+ * Touch-enabled carousel for commercial works
  */
 
 export class Carousel {
@@ -11,13 +10,13 @@ export class Carousel {
         this.prevBtn = document.getElementById(options.prevBtnId || 'prevBtn');
         this.nextBtn = document.getElementById(options.nextBtnId || 'nextBtn');
         this.dotsContainer = document.getElementById(options.dotsContainerId || 'carouselDots');
-        
-        this.currentSlide = 0;
+
+        this.currentIndex = 0;
         this.totalSlides = this.slides.length;
         this.touchStartX = 0;
         this.touchEndX = 0;
-        
-        if (this.track && this.slides.length) {
+
+        if (this.track && this.totalSlides > 0) {
             this.init();
         }
     }
@@ -30,30 +29,24 @@ export class Carousel {
 
     createDots() {
         if (!this.dotsContainer) return;
-        
+
         for (let i = 0; i < this.totalSlides; i++) {
             const dot = document.createElement('button');
             dot.classList.add('carousel-dot');
-            dot.setAttribute('aria-label', `Ir a slide ${i + 1}`);
+            dot.setAttribute('aria-label', `Slide ${i + 1}`);
             if (i === 0) dot.classList.add('active');
             dot.addEventListener('click', () => this.goTo(i));
             this.dotsContainer.appendChild(dot);
         }
-        
-        this.dots = document.querySelectorAll('.carousel-dot');
+
+        this.dots = this.dotsContainer.querySelectorAll('.carousel-dot');
     }
 
     bindEvents() {
-        // Button controls
-        if (this.prevBtn) {
-            this.prevBtn.addEventListener('click', () => this.prev());
-        }
-        
-        if (this.nextBtn) {
-            this.nextBtn.addEventListener('click', () => this.next());
-        }
+        this.prevBtn?.addEventListener('click', () => this.prev());
+        this.nextBtn?.addEventListener('click', () => this.next());
 
-        // Touch events
+        // Touch support
         this.track.addEventListener('touchstart', (e) => {
             this.touchStartX = e.changedTouches[0].screenX;
         }, { passive: true });
@@ -63,76 +56,56 @@ export class Carousel {
             this.handleSwipe();
         });
 
-        // Keyboard navigation
+        // Keyboard navigation when in viewport
         document.addEventListener('keydown', (e) => {
-            if (this.isInViewport()) {
-                if (e.key === 'ArrowLeft') this.prev();
-                if (e.key === 'ArrowRight') this.next();
-            }
+            if (!this.isInViewport()) return;
+            if (e.key === 'ArrowLeft') this.prev();
+            if (e.key === 'ArrowRight') this.next();
         });
     }
 
     isInViewport() {
         const rect = this.track.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
-        );
+        return rect.top >= 0 && rect.bottom <= window.innerHeight;
     }
 
     handleSwipe() {
         const diff = this.touchStartX - this.touchEndX;
-        const threshold = 50;
-        
-        if (Math.abs(diff) > threshold) {
-            if (diff > 0) {
-                this.next();
-            } else {
-                this.prev();
-            }
+        if (Math.abs(diff) > 50) {
+            diff > 0 ? this.next() : this.prev();
         }
     }
 
     goTo(index) {
         if (index >= 0 && index < this.totalSlides) {
-            this.currentSlide = index;
+            this.currentIndex = index;
             this.update();
         }
     }
 
     prev() {
-        if (this.currentSlide > 0) {
-            this.currentSlide--;
+        if (this.currentIndex > 0) {
+            this.currentIndex--;
             this.update();
         }
     }
 
     next() {
-        if (this.currentSlide < this.totalSlides - 1) {
-            this.currentSlide++;
+        if (this.currentIndex < this.totalSlides - 1) {
+            this.currentIndex++;
             this.update();
         }
     }
 
     update() {
-        // Update track position
-        this.track.style.transform = `translateX(-${this.currentSlide * 100}%)`;
-        
-        // Update dots
-        if (this.dots) {
-            this.dots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === this.currentSlide);
-            });
-        }
+        this.track.style.transform = `translateX(-${this.currentIndex * 100}%)`;
 
-        // Update buttons
-        if (this.prevBtn) {
-            this.prevBtn.disabled = this.currentSlide === 0;
-        }
-        
-        if (this.nextBtn) {
-            this.nextBtn.disabled = this.currentSlide === this.totalSlides - 1;
-        }
+        this.dots?.forEach((dot, i) => {
+            dot.classList.toggle('active', i === this.currentIndex);
+        });
+
+        if (this.prevBtn) this.prevBtn.disabled = this.currentIndex === 0;
+        if (this.nextBtn) this.nextBtn.disabled = this.currentIndex === this.totalSlides - 1;
     }
 }
 

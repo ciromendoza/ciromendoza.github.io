@@ -1,321 +1,765 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ciro Mendoza · Media Artist & Chiptuner Performer</title>
-    <meta name="description" content="Artista chiptune, desarrollador creativo y cofundador de Blipblop. Creo experiencias audiovisuales con tecnología obsoleta, Game Boy y sintetizadores 8-bit.">
-    <meta name="keywords" content="chiptune, 8bit, Game Boy, chipmusic, Buenos Aires, Blipblop, arte digital, desarrollador creativo, KRANK, Fuzzytronic, Cinematronic, Ciro Mendoza">
-    
+    <title>Ciro Mendoza</title>
+    <meta name="description" content="Ciro Mendoza — Media artist, músico, chiptuner, programador, docente. Buenos Aires / Paraná, Argentina.">
+    <meta name="keywords" content="chiptune, 8bit, Game Boy, chipmusic, Buenos Aires, Blipblop, arte digital, KRANK, Fuzzytronic, Cinematronic, Ciro Mendoza">
+
     <!-- Open Graph -->
-    <meta property="og:title" content="Ciro · Cinematronic · Chiptune Artist">
-    <meta property="og:description" content="Artista chiptune y desarrollador creativo. Game Boy, sintetizadores 8-bit y experiencias audiovisuales.">
+    <meta property="og:title" content="Ciro Mendoza">
+    <meta property="og:description" content="Media artist, músico, chiptuner, programador, docente.">
     <meta property="og:type" content="website">
-    
+
     <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
+
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <nav>
-            <a href="#hero" class="logo">
-                <!-- <span class="logo-icon">C</span> -->
-                CIRO MENDOZA
-            </a>
-            
-            <!-- Mobile Menu Toggle -->
-            <input type="checkbox" id="nav-toggle" class="nav-toggle">
-            
-            <!-- Navigation Menu (debe estar antes del hamburger para CSS ~) -->
-            <ul class="nav-menu">
-                <li><a href="#projects">Proyectos</a></li>
-                <li><a href="https://ciromendoza.github.io/playground" target="_blank">ART LAB</a></li>
-                <li><a href="#story">Historia</a></li>
-                <li><a href="#tools">Herramientas</a></li>
-                <li><a href="#commercial">Trabajos</a></li>
-                <li><a href="#contact">Contacto</a></li>
-            </ul>
-            
-            <!-- Hamburger Button -->
-            <label for="nav-toggle" class="hamburger" aria-label="Menú">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-        </nav>
-    </header>
+
+    <!-- NAV -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-name">Ciro Mendoza</a>
+            <div class="nav-right">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#bio">Bio</a></li>
+                    <li><a href="#trayectoria">Trayectoria</a></li>
+                    <li><a href="#discografia">Discografía</a></li>
+                    <li><a href="#archivo">Archivo</a></li>
+                    <li><a href="#herramientas">Herramientas</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#art-lab">Art Lab</a></li>
+                    <li><a href="#trabajos">Trabajos</a></li>
+                    <li><a href="#obras">Obras</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                    <span class="icon-moon">&#9790;</span>
+                    <span class="icon-sun">&#9728;</span>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
 
     <!-- HERO -->
-    <section id="hero" class="section">
+    <section id="hero" class="hero">
         <div class="container">
-            <div class="hero-content fade-in">
-                <span class="hero-eyebrow">Media Artist · Chiptune Performer</span>
-                <h1 class="hero-title">
-                    <!-- <span class="text-gradient glitch">Ciro Mendoza</span><br> -->
-                    <span class="text-gradient-pink">Ciro Mendoza</span>
+            <h1>Ciro Mendoza</h1>
+            <div class="hero-roles">
+                <span>Media Artist</span>
+                <span>Musico</span>
+                <span>Chiptuner 8-Bit</span>
+                <span>Programador</span>
+                <span>Docente</span>
+                <span>Periodista</span>
+            </div>
+            <p class="hero-location">Buenos Aires / Parana, Argentina — Activo desde 2009</p>
+        </div>
+    </section>
 
-                    <!-- <span style="font-size: 0.5em; color: var(--text-secondary);">aka</span>  -->
-                    <!-- <span class="text-gradient-pink">Cinematronic</span> -->
-                </h1>
-                <p class="hero-subtitle">
-                    Latin American <strong>media artist</strong> working performatively with obsolete hardware and generative audiovisual systems.
-                    <!-- Creo <strong>experiencias audiovisuales</strong> con tecnología obsoleta. 
-                    Game Boy, sintetizadores 8-bit y hardware retro convertidos en 
-                    <strong>instrumentos de arte experimental</strong>. -->
-                </p>
-                <p class="hero-subtitle" style="font-size: 0.95rem; margin-top: -1rem;">
-                    Cofundador del colectivo <strong style="color: var(--secondary);">Blipblop</strong>.
-                </p>
-                <div class="hero-cta">
-                    <a href="https://www.youtube.com/@ciberdelia.telnet" target="_blank" class="btn btn-primary">
-                        <i class="fab fa-youtube"></i> Ver en YouTube
-                    </a>
-                    <a href="#projects" class="btn btn-outline">
-                        Explorar proyectos <i class="fas fa-arrow-down"></i>
-                    </a>
+    <!-- 01 BIO -->
+    <section id="bio">
+        <div class="container">
+            <div class="section-head">
+                <span class="section-num">01</span>
+                <span class="section-label">Biografia</span>
+            </div>
+            <div class="about-grid">
+                <div class="about-text fade-in">
+                    <p>
+                        Nacido en Buenos Aires, 1981. Artista multimedial, musico, chiptuner, programador y docente.
+                        Trabajo con chips de sonido de consolas de videojuegos de los anos 80 —Game Boy, NES, Commodore—
+                        transformandolos en instrumentos musicales.
+                    </p>
+                    <p>
+                        Bajo el alias <strong>Cinematronic</strong>, desde 2009 desarrollo una practica que transita entre la musica experimental,
+                        el arte sonoro, las instalaciones interactivas y la educacion tecnologica.
+                        Co-fundé <strong>Blipblop</strong>, sello y fiesta de chiptune activo en Argentina.
+                        Fui parte de <strong>The Scotties</strong> en Parana. Actualmente desarrollo <strong>Fuzzytronic</strong>.
+                    </p>
+                    <p>
+                        Como periodista, escribi para la edicion argentina de <strong>Los Inrockuptibles</strong>.
+                        Como programador y docente, trabajo en la interseccion entre tecnologia, arte y pedagogia.
+                        En 2012 lideré el desarrollo del videojuego de <strong>El Eternauta</strong> bajo Dev Labs Inc.,
+                        un proyecto que cubrio la prensa nacional antes de ser suspendido por la familia de Oesterheld.
+                    </p>
+                    <p>
+                        Mi trabajo parte de una premisa: la tecnologia descartada no muere.
+                        Cada chip obsoleto tiene una voz. Mi practica es darle el microfono.
+                    </p>
+                </div>
+                <div class="about-meta fade-in">
+                    <div class="meta-row">
+                        <div class="meta-label">Nacimiento</div>
+                        <div class="meta-value">Buenos Aires, 1981</div>
+                    </div>
+                    <div class="meta-row">
+                        <div class="meta-label">Ubicacion</div>
+                        <div class="meta-value">Buenos Aires / Parana, AR</div>
+                    </div>
+                    <div class="meta-row">
+                        <div class="meta-label">Alias</div>
+                        <div class="meta-value">Cinematronic, KRANK, Cinematronic Labs</div>
+                    </div>
+                    <div class="meta-row">
+                        <div class="meta-label">Disciplina</div>
+                        <div class="meta-value">Media art, chiptune, instalacion, programacion, docencia</div>
+                    </div>
+                    <div class="meta-row">
+                        <div class="meta-label">Profesion</div>
+                        <div class="meta-value">Profesor de IT, desarrollador de software, artista multimedia</div>
+                    </div>
+                    <div class="meta-row">
+                        <div class="meta-label">Prensa</div>
+                        <div class="meta-value">Los Inrockuptibles (AR)</div>
+                    </div>
+                    <div class="meta-row">
+                        <div class="meta-label">Activo</div>
+                        <div class="meta-value">2009 – presente</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PROYECTOS ARTÍSTICOS -->
-    <section id="projects" class="section">
+    <!-- 02 TRAYECTORIA -->
+    <section id="trayectoria">
         <div class="container">
-            <span class="label">Proyectos artísticos</span>
-            <h2>Sonido 8-bit, <span class="text-gradient">Máquinas Obsoletas</span></h2>
-            
-            <div class="projects-grid">
-                <!-- PROYECTO DESTACADO: Fuzzytronic -->
-                <article class="project-card featured fade-in">
-                    <div class="project-media">
-                        <span class="project-badge badge-bottom-right">Nuevo 2026</span>
-                        <iframe 
-                            src="https://www.youtube.com/embed/S4VANo0o9yE" 
-                            title="Fuzzytronic - Game Boy + Batería en vivo"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen
-                            loading="lazy">
-                        </iframe>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-tags">
-                            <span class="project-tag">Live Performance</span>
-                            <span class="project-tag">Game Boy</span>
-                            <span class="project-tag">Drums</span>
-                            <span class="project-tag">LSDJ</span>
-                        </div>
-                        <h3 class="project-title text-gradient-pink">Fuzzytronic</h3>
-                        <p class="project-description">
-                            Proyecto que combina <strong>Game Boy</strong> como sintetizador con 
-                            <strong>batería acústica real</strong>. Una fusión entre el sonido crudo 
-                            del chip de 8-bit y la energía física de la percusión en vivo.
-                            <br><br>
-                            El Game Boy corre LSDJ, controlando secuencias y síntesis mientras 
-                            la batería añade la capa orgánica y humana que el chip no puede dar.
-                        </p>
-                        <div class="project-links">
-                            <a href="https://www.youtube.com/@fuzzytronic.techpunk" target="_blank" class="project-link">
-                                <i class="fab fa-youtube"></i> Ver videos
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Cinematronic - Entrevista Latinchip -->
-                <article class="project-card fade-in">
-                    <div class="project-media">
-                        <iframe 
-                            src="https://www.youtube.com/embed/_bcEIuQt6B8" 
-                            title="Cinematronic - Entrevista Latinchip"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen
-                            loading="lazy">
-                        </iframe>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-tags">
-                            <span class="project-tag">Chiptune</span>
-                            <span class="project-tag">8-bit</span>
-                            <span class="project-tag">Entrevista</span>
-                        </div>
-                        <h3 class="project-title">Cinematronic</h3>
-                        <p class="project-description">
-                            Proyecto solista de chipmusic usando hardware vintage: Game Boy, 
-                            Commodore 64, NES y sintetizadores modificados. Entrevista en el 
-                            programa <strong>Latinchip</strong> sobre la escena chiptune latinoamericana.
-                        </p>
-                        <div class="project-links">
-                            <a href="https://www.youtube.com/@ciberdelia.telnet" target="_blank" class="project-link">
-                                <i class="fab fa-youtube"></i> Más videos
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- KRANK - Juegos Experimentales -->
-                <article class="project-card fade-in">
-                    <div class="project-media">
-                        <img src="assets/portfolio/krank-games.jpg" alt="KRANK - Juegos Experimentales" 
-                             onerror="this.src='https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&h=400&fit=crop'">
-                    </div>
-                    <div class="project-info">
-                        <div class="project-tags">
-                            <span class="project-tag">Game Dev</span>
-                            <span class="project-tag">Experimental</span>
-                            <span class="project-tag">Itch.io</span>
-                        </div>
-                        <h3 class="project-title">KRANK</h3>
-                        <p class="project-description">
-                            Mi alter ego para crear <strong>juegos experimentales</strong>. 
-                            Proyectos que exploran mecánicas no convencionales, narrativas 
-                            alternativas y estéticas retro con un enfoque artístico.
-                        </p>
-                        <div class="project-links">
-                            <a href="https://daskrank.itch.io/" target="_blank" class="project-link">
-                                <i class="fab fa-itch-io"></i> Ver juegos
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Blipblop Legacy -->
-                <article class="project-card fade-in">
-                    <div class="project-media">
-                        <img src="assets/portfolio/blipblop.jpg" alt="Blipblop Colectivo" 
-                             onerror="this.src='https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop'">
-                    </div>
-                    <div class="project-info">
-                        <div class="project-tags">
-                            <span class="project-tag">Colectivo</span>
-                            <span class="project-tag">Buenos Aires</span>
-                            <span class="project-tag">2008-2019</span>
-                        </div>
-                        <h3 class="project-title">Blipblop</h3>
-                        <p class="project-description">
-                            Colectivo pionero de la escena chiptune en Argentina. Organizamos 
-                            eventos, talleres y conectamos a la comunidad latinoamericana de 
-                            chipmusic durante más de una década.
-                        </p>
-                        <div class="project-links">
-                            <a href="https://blipblop8bit.bandcamp.com/" target="_blank" class="project-link">
-                                <i class="fab fa-bandcamp"></i> Netlabel
-                            </a>
-                            <a href="https://www.youtube.com/@blipblop8bit" target="_blank" class="project-link">
-                                <i class="fab fa-youtube"></i> Más videos
-                            </a>
-
-                        </div>
-                    </div>
-                </article>
+            <div class="section-head">
+                <span class="section-num">02</span>
+                <span class="section-label">Trayectoria</span>
             </div>
-        </div>
-    </section>
 
-    <!-- ART LAB PREVIEW -->
-    <section id="art-lab-preview" class="section section-compact">
-        <div class="artlab-grid-bg"></div>
-        
-        <div class="container" style="position: relative; z-index: 2; text-align: center;">
-            <span class="label" style="color: #ff0033;">[ EXPERIMENTAL ]</span>
-            <h2 style="font-size: clamp(2rem, 6vw, 4rem); margin-bottom: 1.5rem;">
-                <span class="text-gradient">ART</span> <span style="color: #333;">///</span> LAB
-            </h2>
-            <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 2rem; font-size: 1.1rem; line-height: 1.8;">
-                Un laboratorio de experimentos en <strong style="color: #fff;">new media</strong>. 
-                Arcade holográfico, síntesis gestual, visualizadores reactivos y más. 
-                <br><br>
-                <!-- <em style="color: #666;">6 proyectos activos en desarrollo.</em> -->
-            </p>
-            
-            <!-- Preview cards -->
-            <!-- <div class="artlab-preview-grid">
-                <div class="artlab-preview-card">
-                    <div style="font-size: 0.6rem; color: #444; letter-spacing: 0.2em; margin-bottom: 10px;">EXP_001</div>
-                    <div style="font-family: 'Space Mono', monospace; font-weight: 700; font-size: 0.9rem;">HOLOGRAPHIC ARCADE</div>
+            <div class="list-item fade-in">
+                <span class="list-idx">01</span>
+                <div class="list-body">
+                    <h3>Fuzzytronic</h3>
+                    <div class="list-meta">2020 – Hoy · Proyecto actual</div>
+                    <p class="list-desc">Duo de Game Boy + bateria con @colomiretti. Extension del trabajo con sonido 8-bit hacia visuales generativos y performance audiovisual en vivo. Shows en La Vieja Usina (Parana) y Crossover Night 2026.</p>
                 </div>
-                <div class="artlab-preview-card">
-                    <div style="font-size: 0.6rem; color: #444; letter-spacing: 0.2em; margin-bottom: 10px;">EXP_003</div>
-                    <div style="font-family: 'Space Mono', monospace; font-weight: 700; font-size: 0.9rem;">GESTURE SYNTH</div>
+            </div>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">02</span>
+                <div class="list-body">
+                    <h3>Cinematronic</h3>
+                    <div class="list-meta">2009 – Hoy · Alias principal</div>
+                    <p class="list-desc">Chiptune con Game Boy y LSDJ. Sin computadoras, sin samples, sin FX. Beats cyberpunk crudos desde el chip de audio. Dos discos: <em>Smart Phones Stupid People</em> (2016) y <em>Drugs and Wires</em> (2019).</p>
                 </div>
-                <div class="artlab-preview-card">
-                    <div style="font-size: 0.6rem; color: #444; letter-spacing: 0.2em; margin-bottom: 10px;">EXP_004</div>
-                    <div style="font-family: 'Space Mono', monospace; font-weight: 700; font-size: 0.9rem;">LIVE VISUALIZER</div>
+            </div>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">03</span>
+                <div class="list-body">
+                    <h3>El Eternauta — Videojuego</h3>
+                    <div class="list-meta">2012 · Dev Labs Inc. · Taringa!</div>
+                    <p class="list-desc">Desarrollo del videojuego basado en el comic de Oesterheld y Solano Lopez. El proyecto fue cubierto por El Cronista y MinutoUno. La demo estaba programada para septiembre de 2012 pero fue suspendida a pedido de la familia del creador. El juego se perdio.</p>
                 </div>
-            </div> -->
+            </div>
 
-            <a href="https://ciromendoza.github.io/playground" target="_blank" class="btn" style="background: transparent; border: 1px solid #fff; color: #fff; padding: 15px 40px; font-size: 0.85rem; letter-spacing: 0.15em;">
-                ENTRAR AL LABORATORIO →
-            </a>
-        </div>
-    </section>
-
-    <!-- HISTORIA / ABOUT -->
-    <section id="story" class="section">
-        <div class="container">
-            <div class="story-grid">
-                <div class="story-content fade-in">
-                    <span class="label">Mi historia</span>
-                    <h2>Del <span class="text-gradient">Chip</span> al <span class="text-gradient-pink">Código</span></h2>
-                    
-                    <p>
-                        Empecé haciendo música con lo que otros consideraban basura electrónica. 
-                        Game Boys rotos, Commodores olvidados, cables que nadie quería. 
-                        <strong>La limitación se convirtió en mi estética.</strong>
-                    </p>
-                    
-                    <p>
-                        En 2008 cofundé <strong>Blipblop</strong>, el primer colectivo de chiptune 
-                        de Buenos Aires. Durante 11 años organizamos fiestas, talleres y conectamos 
-                        a artistas de toda Latinoamérica. Fue una escuela de comunidad y autogestión.
-                    </p>
-
-                    <div class="story-highlight">
-                        <p>
-                            "Desarrollo sistemas interactivos que exploran la tecnología considerada obsoleta como lenguaje poético."
-                        </p>
-                    </div>
-                    
-                    <p>
-                        Hoy combino esa filosofía con desarrollo web, AR y diseño interactivo. 
-                        Mis herramientas cambiaron, pero el objetivo es el mismo: 
-                        <strong>crear experiencias que conecten tecnología con emoción</strong>.
-                    </p>
-
-                    <a href="assets/portfolio/Ciro_CV.pdf" download class="btn btn-outline" style="margin-top: 1rem;">
-                        <i class="fas fa-file-pdf"></i> Descargar CV
-                    </a>
+            <div class="list-item fade-in">
+                <span class="list-idx">04</span>
+                <div class="list-body">
+                    <h3>Blipblop</h3>
+                    <div class="list-meta">Co-fundacion · Sello & Eventos</div>
+                    <p class="list-desc">Colectivo artistico orientado a la micro-programacion sobre dispositivos ludicos en tecnologias obsoletas. Sello discografico de chiptune y fiestas 8-bit en Argentina.</p>
                 </div>
-                
-                <div class="story-visual fade-in">
-                    <img src="assets/portfolio/profile.jpg" alt="Ciro - Cinematronic" class="story-image"
-                         onerror="this.src='https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=600&h=700&fit=crop'">
+            </div>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">05</span>
+                <div class="list-body">
+                    <h3>The Scotties</h3>
+                    <div class="list-meta">2013 – 2016 · Parana, Entre Rios</div>
+                    <p class="list-desc">Banda de rock/indie. Tres singles: <em>Plugins</em> (2013), <em>Walking The Cow</em> (2013, cover de Daniel Johnston) y <em>iLife</em> (2016). Grabados en The Lab, Parana.</p>
+                </div>
+            </div>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">06</span>
+                <div class="list-body">
+                    <h3>Los Inrockuptibles</h3>
+                    <div class="list-meta">Periodismo</div>
+                    <p class="list-desc">Columnista y escritor para la edicion argentina de la revista francesa de musica y cultura.</p>
+                </div>
+            </div>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">07</span>
+                <div class="list-body">
+                    <h3>Pulsar</h3>
+                    <div class="list-meta">Anterior</div>
+                    <p class="list-desc">Musica electronica experimental. Exploracion de texturas sonoras y hardware como instrumento.</p>
+                </div>
+            </div>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">08</span>
+                <div class="list-body">
+                    <h3>Scott Brown</h3>
+                    <div class="list-meta">Anterior</div>
+                    <p class="list-desc">Proyecto musical temprano. Cruce entre generos y formatos electronicos.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- HERRAMIENTAS -->
-    <section id="tools" class="section section-compact">
+    <!-- 03 DISCOGRAFIA: CINEMATRONIC -->
+    <section id="discografia">
         <div class="container">
-            <span class="label">Stack técnico</span>
-            <h2>Herramientas que <span class="text-gradient">uso</span></h2>
-            
-            <div class="tools-container fade-in">
+            <div class="section-head">
+                <span class="section-num">03</span>
+                <span class="section-label">Discografia — Cinematronic</span>
+            </div>
+
+            <div class="album fade-in">
+                <img src="https://f4.bcbits.com/img/a3322028622_10.jpg" alt="Smart Phones Stupid People" class="album-cover" loading="lazy">
+                <div>
+                    <div class="album-head">
+                        <p class="album-artist">Cinematronic</p>
+                        <h3 class="album-title">Smart Phones Stupid People</h3>
+                        <p class="album-year">BB04 · Blipblop · 2016</p>
+                    </div>
+                    <ul class="album-tracks">
+                        <li><span>01</span><span>Data</span><span>4:22</span></li>
+                        <li><span>02</span><span>Stack Overflow</span><span>2:48</span></li>
+                        <li><span>03</span><span>T is for Trendy</span><span>2:11</span></li>
+                        <li><span>04</span><span>Neon Spandex</span><span>2:34</span></li>
+                        <li><span>05</span><span>Fucked Up</span><span>2:47</span></li>
+                        <li><span>06</span><span>Riot</span><span>3:20</span></li>
+                    </ul>
+                    <p class="album-note">Distopia, cyberpunk, militancia retrotecnologica. Grabado con Game Boy DMG-CPU-06 + ProSound mod + LSDJ 4.1.0.</p>
+                    <div class="album-links">
+                        <a href="https://blipblop8bit.bandcamp.com/album/smart-phones-stupid-people" target="_blank" rel="noopener" class="album-link">Bandcamp</a>
+                        <a href="https://open.spotify.com/search/cinematronic%20smart%20phones" target="_blank" rel="noopener" class="album-link">Spotify</a>
+                        <a href="https://music.apple.com/search?term=cinematronic+smart+phones+stupid+people" target="_blank" rel="noopener" class="album-link">Apple Music</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="album fade-in">
+                <img src="https://f4.bcbits.com/img/a4182287268_10.jpg" alt="Drugs and Wires" class="album-cover" loading="lazy">
+                <div>
+                    <div class="album-head">
+                        <p class="album-artist">Cinematronic</p>
+                        <h3 class="album-title">Drugs and Wires</h3>
+                        <p class="album-year">BB19 · Blipblop · 2019</p>
+                    </div>
+                    <ul class="album-tracks">
+                        <li><span>01</span><span>HRDWIRED</span><span>2:30</span></li>
+                        <li><span>02</span><span>LOWLIFE</span><span>4:11</span></li>
+                        <li><span>03</span><span>HEADCRSH</span><span>4:17</span></li>
+                    </ul>
+                    <p class="album-note">Sonido crudo, harsh, technopunk. Grabado por p4v0v (CoMu). Masterizado por Mambo Rivas (Hiroshima Dandys).</p>
+                    <div class="album-links">
+                        <a href="https://cinematronic.bandcamp.com/album/drugs-and-wires" target="_blank" rel="noopener" class="album-link">Bandcamp</a>
+                        <a href="https://open.spotify.com/search/cinematronic%20drugs%20and%20wires" target="_blank" rel="noopener" class="album-link">Spotify</a>
+                        <a href="https://music.apple.com/search?term=cinematronic+drugs+and+wires" target="_blank" rel="noopener" class="album-link">Apple Music</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 03b DISCOGRAFIA: THE SCOTTIES -->
+    <section>
+        <div class="container">
+            <div class="section-head">
+                <span class="section-num">03b</span>
+                <span class="section-label">Discografia — The Scotties</span>
+            </div>
+
+            <div class="album fade-in">
+                <img src="https://f4.bcbits.com/img/a2218949253_10.jpg" alt="iLife" class="album-cover" loading="lazy">
+                <div>
+                    <div class="album-head">
+                        <p class="album-artist">The Scotties</p>
+                        <h3 class="album-title">iLife</h3>
+                        <p class="album-year">Single · 2016 · Parana, ER</p>
+                    </div>
+                    <ul class="album-tracks">
+                        <li><span>01</span><span>iLife</span><span>3:36</span></li>
+                        <li><span>02</span><span>iLife (reprise)</span><span>3:15</span></li>
+                    </ul>
+                    <p class="album-note">Compuesto/producido por Ciro Mendoza. Arreglos: Seba Hallam, Flaco Lopez. Reprise: Jesus Mansilla.</p>
+                    <div class="album-links">
+                        <a href="https://thescotties.bandcamp.com/album/ilife-single-2016" target="_blank" rel="noopener" class="album-link">Bandcamp</a>
+                        <a href="https://www.youtube.com/channel/UCMLrvIqkvBHYqPl-S5pLVMQ" target="_blank" rel="noopener" class="album-link">YouTube</a>
+                        <a href="https://soundcloud.com/thescotties" target="_blank" rel="noopener" class="album-link">SoundCloud</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="album fade-in">
+                <img src="https://f4.bcbits.com/img/a3050824901_10.jpg" alt="Walking The Cow" class="album-cover" loading="lazy">
+                <div>
+                    <div class="album-head">
+                        <p class="album-artist">The Scotties</p>
+                        <h3 class="album-title">Walking The Cow</h3>
+                        <p class="album-year">Single · 2013 · Parana, ER</p>
+                    </div>
+                    <ul class="album-tracks">
+                        <li><span>01</span><span>Walking The Cow</span><span>2:46</span></li>
+                    </ul>
+                    <p class="album-note">Version de Daniel Johnston (<em>Hi, How are you</em>, 1983).</p>
+                    <div class="album-links">
+                        <a href="https://thescotties.bandcamp.com/album/walking-the-cow-single-2013" target="_blank" rel="noopener" class="album-link">Bandcamp</a>
+                        <a href="https://www.youtube.com/channel/UCMLrvIqkvBHYqPl-S5pLVMQ" target="_blank" rel="noopener" class="album-link">YouTube</a>
+                        <a href="https://soundcloud.com/thescotties" target="_blank" rel="noopener" class="album-link">SoundCloud</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="album fade-in">
+                <img src="https://f4.bcbits.com/img/a2950481548_10.jpg" alt="Plugins" class="album-cover" loading="lazy">
+                <div>
+                    <div class="album-head">
+                        <p class="album-artist">The Scotties</p>
+                        <h3 class="album-title">Plugins</h3>
+                        <p class="album-year">Single · 2013 · Parana, ER</p>
+                    </div>
+                    <ul class="album-tracks">
+                        <li><span>01</span><span>Plugins</span><span>2:33</span></li>
+                    </ul>
+                    <p class="album-note">Producido por Scott Brown. Grabado en The Lab, Parana. Mezclado por Ciro. Foto: Deborah Franco.</p>
+                    <div class="album-links">
+                        <a href="https://thescotties.bandcamp.com/album/plugins-single-2013" target="_blank" rel="noopener" class="album-link">Bandcamp</a>
+                        <a href="https://www.youtube.com/channel/UCMLrvIqkvBHYqPl-S5pLVMQ" target="_blank" rel="noopener" class="album-link">YouTube</a>
+                        <a href="https://soundcloud.com/thescotties" target="_blank" rel="noopener" class="album-link">SoundCloud</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 04 ARCHIVO -->
+    <section id="archivo">
+        <div class="container">
+            <div class="section-head">
+                <span class="section-num">04</span>
+                <span class="section-label">Archivo</span>
+            </div>
+
+            <!-- EVENTS -->
+            <h3 style="font-size:0.75rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--text-2);margin-bottom:var(--space-md);">Eventos</h3>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">01</span>
+                <div class="list-body">
+                    <h3>Blipblop Party @ Naranja Verde</h3>
+                    <div class="list-meta">6 sept 2014 · Naranja Verde, Av Santa Fe 1284, Buenos Aires</div>
+                    <p class="list-desc">Fiesta 8-bit con live sets de Cinematronic, CoMu, Los Pat Moritas, Naku Berneri. Documentada en video: <a href="https://www.youtube.com/watch?v=oatyyKothSo" target="_blank" rel="noopener">YouTube</a></p>
+                </div>
+            </div>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">02</span>
+                <div class="list-body">
+                    <h3>Fiesta Blipblop #19</h3>
+                    <div class="list-meta">19 ago (circa 2017-2018) · Aguero 787, Buenos Aires · $100</div>
+                    <p class="list-desc">8Bit, Chiptune, BitPop y PCMusic para bailar toda la noche. Arcades para jugar.</p>
+                </div>
+            </div>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">03</span>
+                <div class="list-body">
+                    <h3>Blipblop X3 @ Espacio Metanoia</h3>
+                    <div class="list-meta">Buenos Aires</div>
+                    <p class="list-desc">Fiesta chiptune con CoMu en vivo. Video: <a href="https://www.youtube.com/watch?v=CQ_kVRdIks8" target="_blank" rel="noopener">YouTube</a></p>
+                </div>
+            </div>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">04</span>
+                <div class="list-body">
+                    <h3>Blipblop en Parana</h3>
+                    <div class="list-meta">16 jun 2019 · Puerto de Parana, Entre Rios</div>
+                    <p class="list-desc">Fiesta chiptune con Cinematronic, Replicant, Los Pat Moritas, Payaso Cagar Trompada. Visuales de Desi Dee y ALT259. Cobertura de <a href="https://170escalones.com/musica-reciclada/" target="_blank" rel="noopener">Revista 170 Escalones</a>. Audio del set de Cinematronic en <a href="https://ar.ivoox.com/es/data-cinematronic_md_37314017_wp_1.mp3" target="_blank" rel="noopener">iVoox</a>.</p>
+                </div>
+            </div>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">05</span>
+                <div class="list-body">
+                    <h3>Taller de Chipmusic en Fundacion Telefonica</h3>
+                    <div class="list-meta">Feb–Mar (circa 2017-2018) · Fundacion Telefonica Argentina, Buenos Aires</div>
+                    <p class="list-desc">Taller gratuito de chipmusic y musica 8-bit a cargo de CoMu. 4 encuentros quincenales.</p>
+                </div>
+            </div>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">06</span>
+                <div class="list-body">
+                    <h3>Taller de musica y fiesta en ocho bits</h3>
+                    <div class="list-meta">18 nov 2017 · Alberdi 650, Resistencia, Chaco</div>
+                    <p class="list-desc">Taller de programacion de musica chiptune con trackers y Game Boy. Cobertura de <a href="https://www.eldiariodelaregion.com.ar/articulo/taller-de-musica-y-fiesta-en-ocho-bits_0rd8pevyv8/" target="_blank" rel="noopener">El Diario de la Region</a>.</p>
+                </div>
+            </div>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">07</span>
+                <div class="list-body">
+                    <h3>La Noche del Pixel</h3>
+                    <div class="list-meta">Multiples ediciones · Buenos Aires</div>
+                    <p class="list-desc">Evento de chiptune y videojuegos retro. Sets en vivo de Cinematronic con ritmos electronicos agresivos.</p>
+                </div>
+            </div>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">08</span>
+                <div class="list-body">
+                    <h3>+30 fiestas Blipblop en 10 anos</h3>
+                    <div class="list-meta">2009–2019 · Buenos Aires, Montevideo, Resistencia, Corrientes, Mar del Plata, Cordoba, Villa Maria, Parana</div>
+                    <p class="list-desc">Mas de 30 fiestas en distintas ciudades de Argentina y Uruguay. Punto de encuentro de la escena chiptune latinoamericana.</p>
+                </div>
+            </div>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">09</span>
+                <div class="list-body">
+                    <h3>Blipblop Party @ Espacio Cultural Mi Casa</h3>
+                    <div class="list-meta">Dic 2014 · Buenos Aires</div>
+                    <p class="list-desc">Fiesta chiptune con live sets.</p>
+                </div>
+            </div>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">10</span>
+                <div class="list-body">
+                    <h3>Blipblop Party @ Aguero 787</h3>
+                    <div class="list-meta">Ago 2018 · Aguero 787, Buenos Aires</div>
+                    <p class="list-desc">8Bit, Chiptune, BitPop y PCMusic. Arcades para jugar.</p>
+                </div>
+            </div>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">11</span>
+                <div class="list-body">
+                    <h3>Rockelinux 3</h3>
+                    <div class="list-meta">Oct 2017</div>
+                    <p class="list-desc">Participacion en el evento de software libre con set de chiptune.</p>
+                </div>
+            </div>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">12</span>
+                <div class="list-body">
+                    <h3>Noviembre Electronico</h3>
+                    <div class="list-meta">Nov (ano por confirmar)</div>
+                    <p class="list-desc">Participacion en el festival de musica electronica.</p>
+                </div>
+            </div>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">13</span>
+                <div class="list-body">
+                    <h3>Primer Encuentro de Musica Experimental Argentina</h3>
+                    <div class="list-meta">May 2026</div>
+                    <p class="list-desc">Participacion como Cinematronic en el encuentro nacional de musica experimental.</p>
+                </div>
+            </div>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">14</span>
+                <div class="list-body">
+                    <h3>Fuzzytronic @ Crossover Night</h3>
+                    <div class="list-meta">2026 · La Vieja Usina, Parana</div>
+                    <p class="list-desc">Performance de Fuzzytronic (Game Boy + bateria con @colomiretti) en La Vieja Usina.</p>
+                </div>
+            </div>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">15</span>
+                <div class="list-body">
+                    <h3>Cybercirujas</h3>
+                    <div class="list-meta">Buenos Aires</div>
+                    <p class="list-desc">Evento de cultura digital y chiptune.</p>
+                </div>
+            </div>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">16</span>
+                <div class="list-body">
+                    <h3>Gatx Negrx Cafe Cultural</h3>
+                    <div class="list-meta">Buenos Aires</div>
+                    <p class="list-desc">Performance en espacio cultural independiente.</p>
+                </div>
+            </div>
+
+            <!-- PRESS -->
+            <h3 style="font-size:0.75rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--text-2);margin:var(--space-xl) 0 var(--space-md);">Prensa</h3>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">01</span>
+                <div class="list-body">
+                    <h3>Musica reciclada</h3>
+                    <div class="list-meta">19 jun 2019 · <a href="https://170escalones.com/musica-reciclada/" target="_blank" rel="noopener">Revista 170 Escalones</a></div>
+                    <p class="list-desc">Cronica de la fiesta Blipblop en Parana. Fotos y texto por Roman Mayora. Entrevista a Cinematronic, Los Pat Moritas y ALT259.</p>
+                </div>
+            </div>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">02</span>
+                <div class="list-body">
+                    <h3>Taller de musica y fiesta en ocho bits</h3>
+                    <div class="list-meta">18 nov 2017 · <a href="https://www.eldiariodelaregion.com.ar/articulo/taller-de-musica-y-fiesta-en-ocho-bits_0rd8pevyv8/" target="_blank" rel="noopener">El Diario de la Region</a></div>
+                    <p class="list-desc">Nota sobre el taller de Blipblop en Resistencia.</p>
+                </div>
+            </div>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">03</span>
+                <div class="list-body">
+                    <h3>Suspenden la publicacion del juego de El Eternauta</h3>
+                    <div class="list-meta">22 jul 2012 · <a href="https://www.cronista.com/infotechnology/it-business/suspenden-la-publicacion-del-juego-de-el-eternauta/" target="_blank" rel="noopener">El Cronista</a></div>
+                    <p class="list-desc">Cobertura del proyecto Dev Labs Inc. La familia de Oesterheld solicito no publicar la demo.</p>
+                </div>
+            </div>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">04</span>
+                <div class="list-body">
+                    <h3>Programadores preparan el videojuego de El Eternauta</h3>
+                    <div class="list-meta">18 jul 2012 · <a href="https://www.minutouno.com/tecno/videojuegos/programadores-preparan-el-videojuego-el-eternauta-n255656" target="_blank" rel="noopener">MinutoUno</a></div>
+                    <p class="list-desc">Primera cobertura del proyecto de videojuego de El Eternauta por Dev Labs Inc.</p>
+                </div>
+            </div>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">05</span>
+                <div class="list-body">
+                    <h3>La fiesta Blip Blop: una noche con musica de videojuegos en Buenos Aires</h3>
+                    <div class="list-meta">Abr 2018 · <a href="https://www.reddit.com/r/argentina/comments/8bqopp/la_fiesta_blip_blop_una_noche_con_m%C3%BAsica_de/" target="_blank" rel="noopener">Reddit r/argentina</a></div>
+                    <p class="list-desc">Post viral sobre las fiestas Blipblop en Buenos Aires.</p>
+                </div>
+            </div>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">06</span>
+                <div class="list-body">
+                    <h3>Blipblop 8bit Party @ Naranja Verde</h3>
+                    <div class="list-meta">Sep 2014 · <a href="https://retrocomputacion.net/forum/noticias-y-eventos/94106/sabado-6-de-septiembre-blipblop-8bit-party-naranja-verde/" target="_blank" rel="noopener">Retrocomputacion.net</a></div>
+                    <p class="list-desc">Anuncio del evento en el foro de retrocomputacion argentino.</p>
+                </div>
+            </div>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">07</span>
+                <div class="list-body">
+                    <h3>Bandcamp Daily Feature</h3>
+                    <div class="list-meta">Dic 2018 · <a href="https://daily.bandcamp.com" target="_blank" rel="noopener">Bandcamp Daily</a></div>
+                    <p class="list-desc">Articulo destacado sobre Cinematronic y la escena chiptune argentina en la publicacion oficial de Bandcamp.</p>
+                </div>
+            </div>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">08</span>
+                <div class="list-body">
+                    <h3>LAPOPLIFE — Perfil de Cinematronic</h3>
+                    <div class="list-meta">Nov 2015 · <a href="https://lapoplife.com" target="_blank" rel="noopener">LAPOPLIFE</a></div>
+                    <p class="list-desc">Perfil editorial sobre Cinematronic y la escena chiptune de Buenos Aires.</p>
+                </div>
+            </div>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">09</span>
+                <div class="list-body">
+                    <h3>El Planteo — Mencion Cinematronic/Blipblop</h3>
+                    <div class="list-meta">Abr 2023 · <a href="https://elplanteo.com" target="_blank" rel="noopener">El Planteo</a></div>
+                    <p class="list-desc">Articulo que menciona a Cinematronic y Blipblop en el contexto de la cultura digital argentina.</p>
+                </div>
+            </div>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">10</span>
+                <div class="list-body">
+                    <h3>Pixel Syndrome — Retrato/Entrevista</h3>
+                    <div class="list-meta">Abr 2019 · <a href="https://www.facebook.com/cinematronic/posts/chequeen-la-nota-a-cinematronic-para-chiptunes-win-por-pixel-syndrome" target="_blank" rel="noopener">Facebook</a></div>
+                    <p class="list-desc">Retrato artistico e ilustraciones de Cinematronic por Pixel Syndrome, con entrevista.</p>
+                </div>
+            </div>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">11</span>
+                <div class="list-body">
+                    <h3>Mencion en Wikipedia — Uctumi</h3>
+                    <div class="list-meta"><a href="https://es.wikipedia.org/wiki/Uctumi" target="_blank" rel="noopener">Wikipedia</a></div>
+                    <p class="list-desc">Mencion de Cinematronic/Blipblop en el articulo de Wikipedia sobre Uctumi, artista chiptune argentino.</p>
+                </div>
+            </div>
+
+            <!-- INTERVIEWS -->
+            <h3 style="font-size:0.75rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--text-2);margin:var(--space-xl) 0 var(--space-md);">Entrevistas & Videos</h3>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">01</span>
+                <div class="list-body">
+                    <h3>Latin Chip Ep. 6: Cinematronic</h3>
+                    <div class="list-meta">19 sep 2019 · <a href="https://www.youtube.com/watch?v=_bcEIuQt6B8" target="_blank" rel="noopener">YouTube</a> · <a href="https://pressover.news/noticias/latin-chip-estrena-su-sexto-capitulo-cinematronic/" target="_blank" rel="noopener">Press Over</a></div>
+                    <p class="list-desc">Entrevista de ~30 min. Ciro toca con PSP y cuenta los inicios de la escena chiptune en Parana, la creacion de Blipblop y el origen de su nombre artistico.</p>
+                </div>
+            </div>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">02</span>
+                <div class="list-body">
+                    <h3>Chiptune Interview: Cinematronic (Buenos Aires)</h3>
+                    <div class="list-meta">2019 · <a href="https://www.reddit.com/r/chiptunes/comments/bes9or/chiptune_interview_cinematronic_buenos_aires/" target="_blank" rel="noopener">Reddit r/chiptunes</a> · The Overworld</div>
+                    <p class="list-desc">Entrevista "Go all out punk" publicada en The Overworld y compartida en Reddit.</p>
+                </div>
+            </div>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">03</span>
+                <div class="list-body">
+                    <h3>Cinematronic & Petscii Cola LIVE @ Blipblop Party</h3>
+                    <div class="list-meta"><a href="https://www.youtube.com/@ciberdelia.telnet" target="_blank" rel="noopener">YouTube</a></div>
+                    <p class="list-desc">Video en vivo de performance conjunta en fiesta Blipblop.</p>
+                </div>
+            </div>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">04</span>
+                <div class="list-body">
+                    <h3>Fiesta BLIPBLOP 8bit en Argentina</h3>
+                    <div class="list-meta"><a href="https://www.youtube.com/watch?v=oatyyKothSo" target="_blank" rel="noopener">YouTube</a></div>
+                    <p class="list-desc">Documento historico de la fiesta Blip Blop en Naranja Verde.</p>
+                </div>
+            </div>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">05</span>
+                <div class="list-body">
+                    <h3>Chiptunes = WIN — Pixel Syndrome</h3>
+                    <div class="list-meta">Abr 2019 · Facebook Cinematronic</div>
+                    <p class="list-desc">Nota a Cinematronic con ilustraciones de Pixel Syndrome.</p>
+                </div>
+            </div>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">06</span>
+                <div class="list-body">
+                    <h3>Cinematronic en Vimeo</h3>
+                    <div class="list-meta"><a href="https://vimeo.com/cinematronic" target="_blank" rel="noopener">vimeo.com/cinematronic</a></div>
+                    <p class="list-desc">Perfil de video con performances y contenido audiovisual.</p>
+                </div>
+            </div>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">07</span>
+                <div class="list-body">
+                    <h3>Drugs and Wires — Full Album</h3>
+                    <div class="list-meta">2019 · <a href="https://www.youtube.com/results?search_query=cinematronic+drugs+and+wires+full+album" target="_blank" rel="noopener">YouTube</a></div>
+                    <p class="list-desc">Album completo disponible en YouTube.</p>
+                </div>
+            </div>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">08</span>
+                <div class="list-body">
+                    <h3>Fuzzytronic en vivo @ Crossover Night 2026</h3>
+                    <div class="list-meta">2026 · <a href="https://www.youtube.com/results?search_query=fuzzytronic+crossover+night+2026" target="_blank" rel="noopener">YouTube</a> · La Vieja Usina, Parana</div>
+                    <p class="list-desc">Performance de Fuzzytronic (Game Boy + bateria) en La Vieja Usina.</p>
+                </div>
+            </div>
+
+            <!-- ACADEMIC -->
+            <h3 style="font-size:0.75rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--text-2);margin:var(--space-xl) 0 var(--space-md);">Tesis & Mencion Academica</h3>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">01</span>
+                <div class="list-body">
+                    <h3>CONTINUM — Facultad de Periodismo y Comunicacion Social, UNLP</h3>
+                    <div class="list-meta"><a href="https://perio.unlp.edu.ar/sistemas/biblioteca/files/CA_Ber_Tdig_pdf_-_15492_.pdf" target="_blank" rel="noopener">PDF</a></div>
+                    <p class="list-desc">Mencion a "la iniciativa de Ciro Mendoza y el equipo Dev Labs" en el contexto de derechos de autor y videojuegos de El Eternauta.</p>
+                </div>
+            </div>
+
+            <!-- FLYERS -->
+            <h3 style="font-size:0.75rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--text-2);margin:var(--space-xl) 0 var(--space-md);">Flyers</h3>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">01</span>
+                <div class="list-body">
+                    <h3>Blipblop Party #20 — Flyer Illustration</h3>
+                    <div class="list-meta">2017 · Diseno: Belu Galetto (@beluge_) · <a href="https://www.behance.net/gallery/55205331/Illustration-for-chiptune-party-flyer-Blipblop-20" target="_blank" rel="noopener">Behance</a></div>
+                    <p class="list-desc">Ilustracion para flyer de la fiesta Blipblop #20 en Argentina.</p>
+                </div>
+            </div>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">02</span>
+                <div class="list-body">
+                    <h3>Blipblop — Material grafico</h3>
+                    <div class="list-meta">Diseno: Belu Galetto (@beluge_) · <a href="https://www.behance.net/gallery/55205331/Blipblop-Flyer" target="_blank" rel="noopener">Behance</a></div>
+                    <p class="list-desc">Flyer design and illustration for Blipblop, chiptune party in Argentina.</p>
+                </div>
+            </div>
+
+            <!-- AUDIO -->
+            <h3 style="font-size:0.75rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--text-2);margin:var(--space-xl) 0 var(--space-md);">Audio</h3>
+
+            <div class="list-item fade-in">
+                <span class="list-idx">01</span>
+                <div class="list-body">
+                    <h3>DATA — Cinematronic en vivo (Blipblop Parana)</h3>
+                    <div class="list-meta">Jun 2019 · <a href="https://ar.ivoox.com/es/data-cinematronic_md_37314017_wp_1.mp3" target="_blank" rel="noopener">iVoox</a></div>
+                    <p class="list-desc">Grabacion en vivo del set de Cinematronic en la fiesta Blipblop de Parana.</p>
+                </div>
+            </div>
+
+            <!-- EXTERNAL PLATFORMS -->
+            <h3 style="font-size:0.75rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--text-2);margin:var(--space-xl) 0 var(--space-md);">Plataformas</h3>
+
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:var(--space-sm);">
+                <a href="https://www.instagram.com/cinematronic.fail" target="_blank" rel="noopener" class="album-link">IG @cinematronic.fail</a>
+                <a href="https://www.instagram.com/ciro.cinematronic" target="_blank" rel="noopener" class="album-link">IG @ciro.cinematronic</a>
+                <a href="https://www.instagram.com/fuzzytronic_" target="_blank" rel="noopener" class="album-link">IG @fuzzytronic_</a>
+                <a href="https://www.instagram.com/ciromendozaa" target="_blank" rel="noopener" class="album-link">IG @ciromendozaa</a>
+                <a href="https://www.facebook.com/cinematronic" target="_blank" rel="noopener" class="album-link">Facebook</a>
+                <a href="https://www.facebook.com/blipblop8bit" target="_blank" rel="noopener" class="album-link">FB Blipblop</a>
+                <a href="https://www.youtube.com/heyciro" target="_blank" rel="noopener" class="album-link">YouTube /heyciro</a>
+                <a href="https://www.youtube.com/@ciberdelia.telnet" target="_blank" rel="noopener" class="album-link">YouTube /ciberdelia</a>
+                <a href="https://vimeo.com/cinematronic" target="_blank" rel="noopener" class="album-link">Vimeo</a>
+                <a href="https://cinematronic.bandcamp.com" target="_blank" rel="noopener" class="album-link">Bandcamp</a>
+                <a href="https://thescotties.bandcamp.com" target="_blank" rel="noopener" class="album-link">The Scotties BC</a>
+                <a href="https://blipblop8bit.bandcamp.com" target="_blank" rel="noopener" class="album-link">Blipblop BC</a>
+                <a href="https://soundcloud.com/thescotties" target="_blank" rel="noopener" class="album-link">SoundCloud</a>
+                <a href="https://www.tumblr.com/latinchip" target="_blank" rel="noopener" class="album-link">Tumblr Latin Chip</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 05 HERRAMIENTAS (migrated from old index) -->
+    <section id="herramientas">
+        <div class="container">
+            <div class="section-head">
+                <span class="section-num">05</span>
+                <span class="section-label">Herramientas</span>
+            </div>
+
+            <div class="fade-in">
                 <div class="tools-category">
-                    <h4 class="tools-category-title">Música / Audio</h4>
+                    <h4 class="tools-category-title">Musica / Audio</h4>
                     <div class="tools-grid">
                         <div class="tool-item"><i class="fas fa-gamepad"></i><span>LSDJ</span></div>
                         <div class="tool-item"><i class="fas fa-microchip"></i><span>Game Boy</span></div>
-                        <!-- <div class="tool-item"><i class="fas fa-music"></i><span>Ableton Live</span></div> -->
-                        <!-- <div class="tool-item"><i class="fas fa-drum"></i><span>Batería</span></div> -->
                         <div class="tool-item"><i class="fas fa-wave-square"></i><span>PSP</span></div>
                     </div>
                 </div>
@@ -332,7 +776,7 @@
                 </div>
 
                 <div class="tools-category">
-                    <h4 class="tools-category-title">Diseño / Interactivo</h4>
+                    <h4 class="tools-category-title">Diseno / Interactivo</h4>
                     <div class="tools-grid">
                         <div class="tool-item"><i class="fab fa-figma"></i><span>Figma</span></div>
                         <div class="tool-item"><i class="fab fa-unity"></i><span>Unity</span></div>
@@ -343,25 +787,174 @@
         </div>
     </section>
 
-    <!-- TRABAJOS COMERCIALES -->
-    <section id="commercial" class="section section-compact">
-        <div class="container" style="text-align: center;">
-            <span class="label">Trabajos por encargo</span>
-            <h2>Desarrollo <span class="text-gradient">Profesional</span></h2>
-            <p class="commercial-intro" style="margin: 0 auto 3rem;">
-                Además del trabajo artístico, desarrollo proyectos web y aplicaciones 
-                para clientes comerciales e institucionales.
+    <!-- 06 PROYECTOS ARTISTICOS (migrated from old index) -->
+    <section id="proyectos">
+        <div class="container">
+            <div class="section-head">
+                <span class="section-num">06</span>
+                <span class="section-label">Proyectos artisticos</span>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Fuzzytronic (featured) -->
+                <article class="project-card featured fade-in">
+                    <div class="project-media">
+                        <span class="project-badge">Nuevo 2026</span>
+                        <iframe
+                            src="https://www.youtube.com/embed/S4VANo0o9yE"
+                            title="Fuzzytronic - Game Boy + Bateria en vivo"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">Live Performance</span>
+                            <span class="project-tag">Game Boy</span>
+                            <span class="project-tag">Drums</span>
+                            <span class="project-tag">LSDJ</span>
+                        </div>
+                        <h3 class="project-title">Fuzzytronic</h3>
+                        <p class="project-description">
+                            Proyecto que combina <strong>Game Boy</strong> como sintetizador con
+                            <strong>bateria acustica real</strong>. Una fusion entre el sonido crudo
+                            del chip de 8-bit y la energia fisica de la percusion en vivo.
+                            <br><br>
+                            El Game Boy corre LSDJ, controlando secuencias y sintesis mientras
+                            la bateria anada la capa organica y humana que el chip no puede dar.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://www.youtube.com/@fuzzytronic.techpunk" target="_blank" class="project-link">
+                                <i class="fab fa-youtube"></i> Ver videos
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Cinematronic -->
+                <article class="project-card fade-in">
+                    <div class="project-media">
+                        <iframe
+                            src="https://www.youtube.com/embed/_bcEIuQt6B8"
+                            title="Cinematronic - Entrevista Latinchip"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">Chiptune</span>
+                            <span class="project-tag">8-bit</span>
+                            <span class="project-tag">Entrevista</span>
+                        </div>
+                        <h3 class="project-title">Cinematronic</h3>
+                        <p class="project-description">
+                            Proyecto solista de chipmusic usando hardware vintage: Game Boy,
+                            Commodore 64, NES y sintetizadores modificados. Entrevista en el
+                            programa <strong>Latinchip</strong> sobre la escena chiptune latinoamericana.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://www.youtube.com/@ciberdelia.telnet" target="_blank" class="project-link">
+                                <i class="fab fa-youtube"></i> Mas videos
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- KRANK -->
+                <article class="project-card fade-in">
+                    <div class="project-media">
+                        <img src="assets/portfolio/krank-games.jpg" alt="KRANK - Juegos Experimentales"
+                             onerror="this.src='https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&h=400&fit=crop'">
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">Game Dev</span>
+                            <span class="project-tag">Experimental</span>
+                            <span class="project-tag">Itch.io</span>
+                        </div>
+                        <h3 class="project-title">KRANK</h3>
+                        <p class="project-description">
+                            Mi alter ego para crear <strong>juegos experimentales</strong>.
+                            Proyectos que exploran mecanicas no convencionales, narrativas
+                            alternativas y esteticas retro con un enfoque artistico.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://daskrank.itch.io/" target="_blank" class="project-link">
+                                <i class="fab fa-itch-io"></i> Ver juegos
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blipblop -->
+                <article class="project-card fade-in">
+                    <div class="project-media">
+                        <img src="assets/portfolio/blipblop.jpg" alt="Blipblop Colectivo"
+                             onerror="this.src='https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop'">
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">Colectivo</span>
+                            <span class="project-tag">Buenos Aires</span>
+                            <span class="project-tag">2008-2019</span>
+                        </div>
+                        <h3 class="project-title">Blipblop</h3>
+                        <p class="project-description">
+                            Colectivo pionero de la escena chiptune en Argentina. Organizamos
+                            eventos, talleres y conectamos a la comunidad latinoamericana de
+                            chipmusic durante mas de una decada.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://blipblop8bit.bandcamp.com/" target="_blank" class="project-link">
+                                <i class="fab fa-bandcamp"></i> Netlabel
+                            </a>
+                            <a href="https://www.youtube.com/@blipblop8bit" target="_blank" class="project-link">
+                                <i class="fab fa-youtube"></i> Mas videos
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 07 ART LAB (migrated from old index) -->
+    <section id="art-lab" class="art-lab">
+        <div class="container">
+            <div class="section-head" style="justify-content: center;">
+                <span class="section-num">07</span>
+                <span class="section-label">Art Lab</span>
+            </div>
+            <p class="art-lab-text fade-in">
+                Un laboratorio de experimentos en <strong>new media</strong>.
+                Arcade holografico, sintesis gestual, visualizadores reactivos y mas.
             </p>
+            <div style="text-align: center;" class="fade-in">
+                <a href="https://ciromendoza.github.io/playground" target="_blank" class="btn">Entrar al laboratorio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 08 TRABAJOS COMERCIALES (carousel migrated from old index) -->
+    <section id="trabajos">
+        <div class="container">
+            <div class="section-head">
+                <span class="section-num">08</span>
+                <span class="section-label">Trabajos</span>
+            </div>
 
             <div class="commercial-carousel fade-in">
                 <div class="commercial-track">
-                                        <div class="commercial-slide">
+                    <div class="commercial-slide">
                         <div class="commercial-card">
-                            <img src="assets/portfolio/ibera.jpg" alt="Iberá AR Museo" class="commercial-image"
+                            <img src="assets/portfolio/ibera.jpg" alt="Ibera AR Museo" class="commercial-image"
                                  onerror="this.src='https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=500&h=280&fit=crop'">
                             <div class="commercial-info">
-                                <h3>Iberá AR - Museo Interactivo</h3>
-                                <p>Experiencia de Realidad Aumentada 3D para paneles del museo Casa Iberá, Corrientes.</p>
+                                <h3>Ibera AR - Museo Interactivo</h3>
+                                <p>Experiencia de Realidad Aumentada 3D para paneles del museo Casa Ibera, Corrientes.</p>
                             </div>
                         </div>
                     </div>
@@ -370,18 +963,18 @@
                             <img src="assets/portfolio/movilfest.png" alt="Movil Fest" class="commercial-image"
                                  onerror="this.src='https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=500&h=280&fit=crop'">
                             <div class="commercial-info">
-                                <h3>Festival Móvil Fest 2020</h3>
+                                <h3>Festival Movil Fest 2020</h3>
                                 <p>Web animada para festival de cine independiente. Misiones, Argentina.</p>
                             </div>
                         </div>
                     </div>
                     <div class="commercial-slide">
                         <div class="commercial-card">
-                            <img src="assets/portfolio/ituzaingo.png" alt="Ituzaingó Ciudad Paraíso" class="commercial-image"
+                            <img src="assets/portfolio/ituzaingo.png" alt="Ituzaingo Ciudad Paraiso" class="commercial-image"
                                  onerror="this.src='https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=500&h=280&fit=crop'">
                             <div class="commercial-info">
-                                <h3>Ituzaingó Ciudad Paraíso</h3>
-                                <p>App de información turística. Corrientes, Argentina.</p>
+                                <h3>Ituzaingo Ciudad Paraiso</h3>
+                                <p>App de informacion turistica. Corrientes, Argentina.</p>
                             </div>
                         </div>
                     </div>
@@ -391,7 +984,7 @@
                                  onerror="this.src='https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=500&h=280&fit=crop'">
                             <div class="commercial-info">
                                 <h3>Geely Argentina</h3>
-                                <p>Web con catálogo de fotos en 360°.</p>
+                                <p>Web con catalogo de fotos en 360°.</p>
                             </div>
                         </div>
                     </div>
@@ -405,7 +998,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
 
@@ -421,41 +1013,121 @@
         </div>
     </section>
 
-    <!-- CONTACTO -->
-    <section id="contact" class="section section-compact">
+    <!-- 09 OBRAS -->
+    <section id="obras">
         <div class="container">
-            <span class="label" style="text-align: center; display: block;">Conectemos</span>
-            <h2 style="text-align: center;">Trabajemos <span class="text-gradient">juntos</span></h2>
-            
-            <p class="contact-statement fade-in">
-                Si buscás a alguien que entienda tanto de código como de creatividad, 
-                que haya vivido la escena y conozca las herramientas, 
-                <strong>hablemos</strong>.
-            </p>
+            <div class="section-head">
+                <span class="section-num">09</span>
+                <span class="section-label">Obras & Trabajo</span>
+            </div>
+            <div class="works-grid">
+                <div class="work-card fade-in">
+                    <div class="work-type">Exposicion</div>
+                    <h3 class="work-title">Tecno poeticas</h3>
+                    <p class="work-where">MAC · UNL · Santa Fe</p>
+                    <p class="work-desc">Colectiva con Romina Casile, Charly Gradin, Luciana Paoletti, Alexis Perepelycia. Nuevas construcciones symbolicas desde la tecnologia.</p>
+                </div>
+                <div class="work-card fade-in">
+                    <div class="work-type">Videojuego</div>
+                    <h3 class="work-title">El Eternauta</h3>
+                    <p class="work-where">Dev Labs Inc. · 2012 · Taringa!</p>
+                    <p class="work-desc">Videojuego basado en el comic de Oesterheld y Solano Lopez. Cubierto por El Cronista y MinutoUno. Suspendido por la familia del creador. El juego se perdio.</p>
+                </div>
+                <div class="work-card fade-in">
+                    <div class="work-type">Taller</div>
+                    <h3 class="work-title">Subversion Digigol</h3>
+                    <p class="work-where">Arte & Tecnologia</p>
+                    <p class="work-desc">Taller de creacion sonora y visual con hardware reutilizado. Subvertir el destino de descarte tecnologico como practica artistica.</p>
+                </div>
+                <div class="work-card fade-in">
+                    <div class="work-type">Performance</div>
+                    <h3 class="work-title">La Noche del Pixel</h3>
+                    <p class="work-where">Buenos Aires</p>
+                    <p class="work-desc">Evento de chiptune y videojuegos retro. Sets en vivo con ritmos electronicos agresivos y texturas experimentales.</p>
+                </div>
+                <div class="work-card fade-in">
+                    <div class="work-type">Instalacion</div>
+                    <h3 class="work-title">Arte Sonoro Interactivo</h3>
+                    <p class="work-where">Varios espacios</p>
+                    <p class="work-desc">Instalaciones que integran sonido, imagen y participacion del publico.</p>
+                </div>
+                <div class="work-card fade-in">
+                    <div class="work-type">Docencia</div>
+                    <h3 class="work-title">Talleres & Formacion</h3>
+                    <p class="work-where">Programacion · Chiptune · Arte Sonoro</p>
+                    <p class="work-desc">Talleres sobre creacion sonora con tecnologia reutilizada, programacion creativa y cultura digital.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <div class="social-links fade-in">
-                <a href="https://www.youtube.com/@ciberdelia.telnet" target="_blank" class="social-link">
-                    <i class="fab fa-youtube"></i> YouTube
-                </a>
-                <a href="https://www.instagram.com/ciro.cinematronic" target="_blank" class="social-link">
-                    <i class="fab fa-instagram"></i> Instagram
-                </a>
-                <a href="https://daskrank.itch.io/" target="_blank" class="social-link">
-                    <i class="fab fa-itch-io"></i> Itch.io
-                </a>
+    <!-- 10 CONTACTO -->
+    <section id="contacto">
+        <div class="container">
+            <div class="section-head">
+                <span class="section-num">10</span>
+                <span class="section-label">Contacto</span>
+            </div>
+            <div class="contact-grid">
+                <div>
+                    <p class="contact-intro">Abierto a colaboraciones, shows, talleres y residencias. Buenos Aires / Parana, Argentina.</p>
+                    <div class="contact-list">
+                        <a href="https://www.instagram.com/cinematronic.fail" target="_blank" rel="noopener" class="contact-row">
+                            <span class="name">Instagram</span>
+                            <span class="handle">@cinematronic.fail</span>
+                        </a>
+                        <a href="https://www.facebook.com/cinematronic" target="_blank" rel="noopener" class="contact-row">
+                            <span class="name">Facebook</span>
+                            <span class="handle">/cinematronic</span>
+                        </a>
+                        <a href="https://www.youtube.com/heyciro" target="_blank" rel="noopener" class="contact-row">
+                            <span class="name">YouTube</span>
+                            <span class="handle">/heyciro</span>
+                        </a>
+                        <a href="https://cinematronic.bandcamp.com" target="_blank" rel="noopener" class="contact-row">
+                            <span class="name">Bandcamp</span>
+                            <span class="handle">cinematronic</span>
+                        </a>
+                        <a href="https://thescotties.bandcamp.com" target="_blank" rel="noopener" class="contact-row">
+                            <span class="name">The Scotties</span>
+                            <span class="handle">thescotties</span>
+                        </a>
+                        <a href="https://soundcloud.com/thescotties" target="_blank" rel="noopener" class="contact-row">
+                            <span class="name">SoundCloud</span>
+                            <span class="handle">thescotties</span>
+                        </a>
+                        <a href="https://blipblop8bit.bandcamp.com" target="_blank" rel="noopener" class="contact-row">
+                            <span class="name">Blipblop</span>
+                            <span class="handle">blipblop8bit</span>
+                        </a>
+                    </div>
+                </div>
+                <form onsubmit="event.preventDefault();">
+                    <div class="form-row">
+                        <label>Nombre</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-row">
+                        <label>Email</label>
+                        <input type="email" required>
+                    </div>
+                    <div class="form-row">
+                        <label>Mensaje</label>
+                        <textarea></textarea>
+                    </div>
+                    <button type="submit" class="btn">Enviar</button>
+                </form>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-logo">
-                <span>&lt;</span><span class="footer-heart">♥</span><span>/&gt;</span>
-            </div>
-            <p class="footer-text">© Intermosh 2026</p>
+    <div class="container">
+        <div class="footer">
+            <span>&copy; 2026 Ciro Mendoza</span>
+            <span>Chips viejos, sonidos nuevos.</span>
         </div>
-    </footer>
+    </div>
 
     <!-- Scripts (ES6 Modules) -->
     <script type="module" src="js/main.js"></script>

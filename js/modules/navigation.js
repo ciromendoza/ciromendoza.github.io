@@ -1,74 +1,77 @@
 /**
  * Navigation Module
- * Handles mobile menu, smooth scroll, and header effects
- * © Intermosh 2025
+ * Handles hamburger menu, smooth scroll, and theme toggle
  */
 
 export function initNavigation() {
-    const navToggle = document.getElementById('nav-toggle');
-    const navLinks = document.querySelectorAll('.nav-menu a');
-    const header = document.querySelector('header');
-    const body = document.body;
+    initThemeToggle();
+    initHamburger();
+    initSmoothScroll();
+}
 
-    // Toggle body scroll when menu opens/closes
-    if (navToggle) {
-        navToggle.addEventListener('change', () => {
-            if (navToggle.checked) {
-                body.style.overflow = 'hidden';
-            } else {
-                body.style.overflow = '';
-            }
-        });
+/**
+ * Theme toggle with localStorage persistence
+ */
+function initThemeToggle() {
+    const toggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+    const saved = localStorage.getItem('theme');
+
+    if (saved) {
+        html.setAttribute('data-theme', saved);
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        html.setAttribute('data-theme', 'dark');
     }
 
-    // Close mobile menu on link click
-    navLinks.forEach(link => {
+    toggle?.addEventListener('click', () => {
+        const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+    });
+}
+
+/**
+ * Hamburger menu toggle
+ */
+function initHamburger() {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger?.addEventListener('click', () => {
+        navLinks?.classList.toggle('open');
+    });
+
+    // Close on link click
+    navLinks?.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
-            if (navToggle) {
-                navToggle.checked = false;
-                body.style.overflow = '';
-            }
+            navLinks.classList.remove('open');
         });
     });
 
-    // Close menu on escape key
+    // Close on Escape
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && navToggle && navToggle.checked) {
-            navToggle.checked = false;
-            body.style.overflow = '';
+        if (e.key === 'Escape') {
+            navLinks?.classList.remove('open');
         }
     });
+}
 
-    // Header scroll effect
-    let lastScroll = 0;
-    
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-        
-        if (currentScroll > 100) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-        
-        lastScroll = currentScroll;
-    }, { passive: true });
-
-    // Smooth scroll for anchor links
+/**
+ * Smooth scroll for anchor links
+ */
+function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const targetId = this.getAttribute('href');
-            
-            // Skip if it's just "#" or external link
-            if (targetId === '#' || !targetId.startsWith('#')) return;
-            
-            e.preventDefault();
-            const target = document.querySelector(targetId);
-            
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href === '#') return;
+
+            const target = document.querySelector(href);
             if (target) {
-                target.scrollIntoView({ 
-                    behavior: 'smooth', 
-                    block: 'start' 
+                e.preventDefault();
+                const navHeight = document.querySelector('.nav')?.offsetHeight || 52;
+                window.scrollTo({
+                    top: target.offsetTop - navHeight,
+                    behavior: 'smooth'
                 });
             }
         });
