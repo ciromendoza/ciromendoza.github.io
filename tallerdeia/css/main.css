@@ -1,0 +1,28 @@
+/* =============================================================
+ * main.css — entry stylesheet
+ * -------------------------------------------------------------
+ * This file imports every stylesheet in dependency order.
+ * The HTML only needs to reference this single file:
+ *
+ *   <link rel="stylesheet" href="css/main.css">
+ *
+ * @import rules MUST appear before any other rules; the
+ * browser silently ignores @import that comes after a style
+ * declaration.
+ * ============================================================= */
+
+/* 1. Design tokens (light + dark palettes) — must load first */
+@import "tokens.css";
+
+/* 2. Reset + typography + global element defaults */
+@import "base.css";
+
+/* 3. Page-level layout primitives (.wrap, .top-bar, footer) */
+@import "layout.css";
+
+/* 4. Component-scoped styles */
+@import "components/agents.css";
+@import "components/flow.css";
+@import "components/prompts.css";
+@import "components/theme-switch.css";
+@import "components/diagram.css";

@@ -1,0 +1,77 @@
+/* =============================================================
+ * components/prompts.css
+ * -------------------------------------------------------------
+ * Collapsible "Prompt windows": a toggle button reveals a
+ * monospace block that the user copies into the corresponding
+ * agent chat. The toggle carries a small SVG mark (circle for
+ * Orquestador, square for Coder) to mirror the agent cards.
+ * ============================================================= */
+
+.prompt-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin: 12px 0;
+  cursor: pointer;
+  font-family: 'Archivo', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-strong);
+  text-align: left;
+  transition: border-color 0.2s;
+}
+
+.prompt-toggle:hover { border-color: var(--text-muted); }
+
+.prompt-toggle .arrow {
+  font-size: 12px;
+  color: var(--text-muted);
+  transition: transform 0.2s;
+}
+
+.prompt-toggle.open .arrow { transform: rotate(90deg); }
+
+.prompt-window {
+  display: none;
+  background: var(--code-bg);
+  color: var(--code-text);
+  border-radius: 0 0 10px 10px;
+  margin: -4px 0 16px;
+  padding: 20px 24px;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-x: auto;
+  max-height: 500px;
+  overflow-y: auto;
+  border: 1px solid var(--code-border);
+  border-top: none;
+}
+
+.prompt-window.open { display: block; }
+
+/* Prompt toggles — title row and inline marks */
+.prompt-toggle-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.prompt-mark-circle {
+  flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.prompt-mark-square {
+  flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
+}

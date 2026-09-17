@@ -1,0 +1,46 @@
+/* =============================================================
+ * tokens.css
+ * -------------------------------------------------------------
+ * Design tokens exposed as CSS custom properties.
+ * Two themes are declared: the default (light) palette on :root
+ * and the dark palette on [data-theme="dark"]. Every other
+ * stylesheet consumes these tokens via var(--token-name).
+ * ============================================================= */
+
+:root {
+  --bg:           #efece4;
+  --surface:      #ffffff;
+  --surface-alt:  #f5f3ed;
+  --border:       #dad5c8;
+
+  --text:           #33342f;
+  --text-strong:    #17181b;
+  --text-secondary: #4c4d47;
+  --text-muted:     #8f8f86;
+
+  --ink:   #17181b;
+  --brand: #3c4560;
+
+  --code-bg:      #17181b;
+  --code-text:    #d4d4c8;
+  --code-border:  #2a2b2e;
+}
+
+html[data-theme="dark"] {
+  --bg:           #121317;
+  --surface:      #1c1d22;
+  --surface-alt:  #202127;
+  --border:       #34353c;
+
+  --text:           #c7c6bd;
+  --text-strong:    #f2f1ea;
+  --text-secondary: #b3b2a8;
+  --text-muted:     #83837c;
+
+  --ink:   #f2f1ea;
+  --brand: #8791c4;
+
+  --code-bg:      #0c0d10;
+  --code-text:   #d4d4c8;
+  --code-border: #2a2b2e;
+}

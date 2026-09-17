@@ -1,0 +1,68 @@
+/* =============================================================
+ * components/agents.css
+ * -------------------------------------------------------------
+ * The "Los Dos Agentes" section: a two-column grid of cards
+ * describing the Orquestador and the Coder. Each card carries
+ * a small SVG identifier (circle for the planner, square for
+ * the builder).
+ * ============================================================= */
+
+.agents {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.agent-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px 20px;
+}
+
+.agent-card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 4px;
+  color: var(--text-strong);
+}
+
+.agent-card .agent-role {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 12px;
+}
+
+.agent-card p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Agent Card Icons */
+.agent-card-icon {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+  color: var(--ink);
+}
+
+.agent-mark-circle {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+.agent-mark-square {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: 480px) {
+  .agents { grid-template-columns: 1fr; }
+}

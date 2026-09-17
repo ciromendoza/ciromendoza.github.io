@@ -1,0 +1,307 @@
+/* =============================================================
+ * components/diagram.css
+ * -------------------------------------------------------------
+ * Visual styles for the scalable SVG diagram of the two-agent
+ * methodology. Covers:
+ *   - container, header, controls, pills
+ *   - the status card that mirrors the active step
+ *   - SVG element states (paths, nodes, traveler dot)
+ *   - the legend at the bottom
+ * The animation logic that toggles these classes lives in
+ * js/modules/diagram/engine.js.
+ * ============================================================= */
+
+.animation-section {
+  margin: 64px 0;
+}
+
+.diagram-container {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px 20px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+}
+
+.diagram-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.diagram-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ctrl-btn {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-strong);
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.ctrl-btn:hover {
+  background: var(--surface-alt);
+  border-color: var(--text-muted);
+}
+
+.step-counter {
+  font-size: 12.5px;
+  color: var(--text-muted);
+}
+
+.step-counter strong {
+  color: var(--text-strong);
+}
+
+.diagram-pills {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+  scrollbar-width: thin;
+}
+
+.step-pill {
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+
+.step-pill:hover {
+  border-color: var(--text-muted);
+  color: var(--text-strong);
+}
+
+.step-pill.active {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--bg);
+  font-weight: 600;
+}
+
+.step-pill.active.pill-loop {
+  background: #c0392b;
+  border-color: #c0392b;
+  color: #fff;
+}
+
+.step-pill.active.pill-pass {
+  background: #2e7d32;
+  border-color: #2e7d32;
+  color: #fff;
+}
+
+.diagram-status-card {
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.status-step-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--text-strong);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-badge {
+  font-size: 10.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: var(--border);
+  color: var(--text-strong);
+}
+
+.status-badge.badge-loop {
+  background: #fde8e8;
+  color: #c0392b;
+}
+html[data-theme="dark"] .status-badge.badge-loop {
+  background: #3b1818;
+  color: #f87171;
+}
+
+.status-badge.badge-pass {
+  background: #e6f4ea;
+  color: #2e7d32;
+}
+html[data-theme="dark"] .status-badge.badge-pass {
+  background: #132e1b;
+  color: #4ade80;
+}
+
+.status-step-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.diagram-wrap {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.diagram-wrap svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+/* ----- SVG Diagram Elements ----- */
+
+.seg-path {
+  transition: stroke 0.3s ease, stroke-width 0.3s ease;
+}
+
+.seg-path.active {
+  stroke: var(--brand) !important;
+  stroke-width: 3.5px !important;
+}
+
+.seg-path.active-loop {
+  stroke: #c0392b !important;
+  stroke-width: 3px !important;
+}
+
+.seg-path.active-pass {
+  stroke: #2e7d32 !important;
+  stroke-width: 3.5px !important;
+}
+
+.diagram-node {
+  transition: transform 0.25s ease, filter 0.25s ease;
+  transform-origin: center;
+  cursor: pointer;
+}
+
+.diagram-node:hover {
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.12));
+}
+
+.diagram-node.active {
+  filter: drop-shadow(0 0 12px rgba(60, 69, 96, 0.45));
+}
+html[data-theme="dark"] .diagram-node.active {
+  filter: drop-shadow(0 0 14px rgba(135, 145, 196, 0.6));
+}
+
+.diagram-node.active-loop {
+  filter: drop-shadow(0 0 12px rgba(192, 57, 43, 0.5));
+}
+
+.diagram-node.active-pass {
+  filter: drop-shadow(0 0 14px rgba(46, 125, 50, 0.55));
+}
+
+.traveler-dot {
+  transition: opacity 0.2s ease;
+  filter: drop-shadow(0 0 6px var(--brand));
+}
+html[data-theme="dark"] .traveler-dot {
+  filter: drop-shadow(0 0 8px #fff);
+}
+
+/* ----- Legend ----- */
+
+.legend {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.legend span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.shape {
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.sh-circ {
+  border: 2.2px solid var(--ink);
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+}
+
+.sh-sq {
+  background: var(--ink);
+  border-radius: 3px;
+  width: 14px;
+  height: 14px;
+}
+
+.sh-doc {
+  border: 1.5px solid var(--text-secondary);
+  border-radius: 2px;
+  width: 11px;
+  height: 14px;
+  background: var(--surface);
+}
+
+.sh-audit {
+  border: 2px solid var(--brand);
+  border-radius: 50%;
+  width: 13px;
+  height: 13px;
+}
+
+.sh-done {
+  background: #2e7d32;
+  border-radius: 50%;
+  width: 13px;
+  height: 13px;
+}
+
+.sh-loop {
+  width: 18px;
+  height: 0;
+  border-top: 2px dashed #c0392b;
+}

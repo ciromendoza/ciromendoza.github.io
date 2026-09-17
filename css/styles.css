@@ -215,7 +215,8 @@ section {
     margin-bottom: var(--space-lg);
 }
 
-.hero-roles span {
+.hero-roles span,
+.hero-roles a {
     font-family: var(--mono);
     font-size: 0.7rem;
     letter-spacing: 0.5px;
@@ -223,6 +224,13 @@ section {
     padding: 4px 10px;
     border: 1px solid var(--border);
     border-radius: var(--radius);
+    text-decoration: none;
+    transition: all var(--transition);
+}
+
+.hero-roles a:hover {
+    color: var(--text);
+    border-color: var(--text-2);
 }
 
 .hero-location {
@@ -311,7 +319,7 @@ section {
 }
 
 /* ============================================
-   LIST ITEMS (projects, works)
+   LIST ITEMS
    ============================================ */
 .list-item {
     display: grid;
@@ -379,111 +387,7 @@ section {
 }
 
 /* ============================================
-   ALBUMS
-   ============================================ */
-.album {
-    display: grid;
-    grid-template-columns: 180px 1fr;
-    gap: var(--space-lg);
-    padding: var(--space-lg) 0;
-    border-bottom: 1px solid var(--border);
-}
-
-.album:first-child {
-    border-top: 1px solid var(--border);
-}
-
-.album-cover {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: var(--radius);
-}
-
-.album-head {
-    margin-bottom: var(--space-sm);
-}
-
-.album-artist {
-    font-family: var(--mono);
-    font-size: 0.65rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: var(--text-3);
-    margin-bottom: 0.25rem;
-}
-
-.album-title {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 0.25rem;
-}
-
-.album-year {
-    font-size: 0.75rem;
-    color: var(--text-3);
-}
-
-.album-tracks {
-    list-style: none;
-    margin-bottom: var(--space-sm);
-}
-
-.album-tracks li {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.35rem 0;
-    font-size: 0.8rem;
-    color: var(--text-2);
-    border-bottom: 1px solid var(--bg-alt);
-}
-
-.album-tracks li span:first-child {
-    font-family: var(--mono);
-    font-size: 0.65rem;
-    color: var(--text-3);
-    width: 1.5rem;
-    flex-shrink: 0;
-}
-
-.album-tracks li span:last-child {
-    font-family: var(--mono);
-    font-size: 0.65rem;
-    color: var(--text-3);
-}
-
-.album-note {
-    font-size: 0.75rem;
-    color: var(--text-3);
-    line-height: 1.6;
-    font-style: italic;
-}
-
-.album-links {
-    display: flex;
-    gap: 0.5rem;
-    margin-top: var(--space-sm);
-    flex-wrap: wrap;
-}
-
-.album-link {
-    font-family: var(--mono);
-    font-size: 0.6rem;
-    letter-spacing: 0.5px;
-    padding: 4px 10px;
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    color: var(--text-2);
-    transition: all var(--transition);
-}
-
-.album-link:hover {
-    border-color: var(--text);
-    color: var(--text);
-}
-
-/* ============================================
-   TOOLS (migrated section)
+   TOOLS
    ============================================ */
 .tools-category {
     margin-bottom: var(--space-lg);
@@ -536,7 +440,7 @@ section {
 }
 
 /* ============================================
-   PROJECTS (migrated section)
+   PROJECTS
    ============================================ */
 .projects-grid {
     display: grid;
@@ -666,7 +570,7 @@ section {
 }
 
 /* ============================================
-   ART LAB (migrated section)
+   ART LAB
    ============================================ */
 .art-lab {
     border-top: 1px solid var(--border);
@@ -692,7 +596,7 @@ section {
 }
 
 /* ============================================
-   COMMERCIAL / TRABAJOS (carousel, migrated)
+   COMMERCIAL / TRABAJOS (carousel)
    ============================================ */
 .commercial-carousel {
     position: relative;
@@ -969,6 +873,205 @@ section {
 }
 
 /* ============================================
+   ACCORDION (Discografia)
+   ============================================ */
+.accordion {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: var(--space-sm);
+    overflow: hidden;
+}
+
+.accordion-trigger {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: var(--space-md);
+    cursor: pointer;
+    text-align: left;
+    color: var(--text);
+    transition: background var(--transition);
+}
+
+.accordion-trigger:hover {
+    background: var(--bg-alt);
+}
+
+.accordion-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.accordion-cover {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    flex-shrink: 0;
+}
+
+.accordion-title {
+    flex: 1;
+    min-width: 0;
+}
+
+.accordion-title h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.15rem;
+}
+
+.accordion-artist {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text-3);
+    display: block;
+    margin-bottom: 0.15rem;
+}
+
+.accordion-year {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    color: var(--text-3);
+}
+
+.accordion-icon {
+    font-size: 1.2rem;
+    color: var(--text-3);
+    transition: transform var(--transition);
+    flex-shrink: 0;
+}
+
+.accordion[aria-expanded="true"] .accordion-icon {
+    transform: rotate(45deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.accordion[aria-expanded="true"] .accordion-content {
+    max-height: 800px;
+}
+
+.accordion-content > *:not(.tracklist):not(.album-note):not(.album-links):not(.album-embed) {
+    padding: 0 var(--space-md);
+}
+
+.accordion-content .tracklist {
+    list-style: none;
+    padding: 0 var(--space-md);
+    margin-bottom: var(--space-sm);
+}
+
+.accordion-content .album-note {
+    font-size: 0.75rem;
+    color: var(--text-3);
+    line-height: 1.6;
+    font-style: italic;
+    padding: 0 var(--space-md);
+    margin-bottom: var(--space-sm);
+}
+
+.accordion-content .album-links {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    padding: 0 var(--space-md) var(--space-md);
+}
+
+.accordion-content .album-embed {
+    padding: 0 var(--space-md) var(--space-md);
+}
+
+.album-link {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text-2);
+    transition: all var(--transition);
+}
+
+.album-link:hover {
+    border-color: var(--text);
+    color: var(--text);
+}
+
+.tracklist li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.35rem 0;
+    font-size: 0.8rem;
+    color: var(--text-2);
+    border-bottom: 1px solid var(--bg-alt);
+}
+
+.track-num {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    color: var(--text-3);
+    width: 1.5rem;
+    flex-shrink: 0;
+}
+
+.track-name {
+    flex: 1;
+}
+
+.track-dur {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    color: var(--text-3);
+}
+
+/* ============================================
+   PLATFORMS (Icon grid)
+   ============================================ */
+.platforms-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.platform-icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text-2);
+    text-decoration: none;
+    transition: all var(--transition);
+}
+
+.platform-icon:hover {
+    border-color: var(--text-3);
+    color: var(--text);
+}
+
+.platform-icon svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+    flex-shrink: 0;
+}
+
+.platform-icon span {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.5px;
+}
+
+/* ============================================
    ANIMATIONS
    ============================================ */
 .fade-in {
@@ -1007,16 +1110,6 @@ section {
         gap: var(--space-lg);
     }
 
-    .album {
-        grid-template-columns: 1fr;
-    }
-
-    .album-cover {
-        width: 100%;
-        height: auto;
-        max-height: 300px;
-    }
-
     .works-grid {
         grid-template-columns: 1fr;
     }
@@ -1045,5 +1138,21 @@ section {
 
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+
+    .accordion-header {
+        flex-wrap: wrap;
+    }
+
+    .platforms-grid {
+        gap: 8px;
+    }
+
+    .platform-icon {
+        padding: 8px 10px;
+    }
+
+    .platform-icon span {
+        font-size: 0.6rem;
     }
 }

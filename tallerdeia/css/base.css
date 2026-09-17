@@ -1,0 +1,109 @@
+/* =============================================================
+ * base.css
+ * -------------------------------------------------------------
+ * Global reset, document body defaults and typography rules
+ * for the page. These styles apply across the whole document
+ * rather than to a specific component.
+ * ============================================================= */
+
+* { box-sizing: border-box; }
+
+html {
+  background: var(--bg);
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text-strong);
+  font-family: 'Archivo', sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.kicker {
+  font-size: 15px;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+}
+
+h1 {
+  font-size: clamp(34px, 6vw, 52px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  margin: 0 0 26px;
+  max-width: 14ch;
+}
+
+.sub {
+  font-size: 18.5px;
+  color: var(--text-secondary);
+  max-width: 46ch;
+  margin-bottom: 64px;
+}
+
+h2 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-strong);
+  margin: 0 0 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-strong);
+  margin: 32px 0 12px;
+}
+
+section { margin-bottom: 56px; }
+
+p {
+  margin: 0 0 16px;
+  max-width: 52ch;
+  color: var(--text);
+}
+p:last-child { margin-bottom: 0; }
+
+p em, li em {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--text-strong);
+}
+
+strong {
+  font-weight: 600;
+  color: var(--text-strong);
+}
+
+ul, ol {
+  margin: 0 0 16px;
+  padding-left: 20px;
+  color: var(--text);
+}
+li { margin-bottom: 6px; }
+
+.rule {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 56px 0;
+}
+
+.pull {
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(22px, 4vw, 30px);
+  line-height: 1.4;
+  color: var(--text-strong);
+  max-width: 18ch;
+  margin: 64px 0;
+}
+.pull span { color: var(--brand); }
+
+@media (max-width: 480px) {
+  h1 { max-width: none; }
+}
